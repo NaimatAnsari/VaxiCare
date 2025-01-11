@@ -15,9 +15,9 @@
             <div class="col-lg-7">
                 <div class="mb-4">
                     <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
-                    <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
+                    <h1 class="display-4">Comprehensive Vaccination Services for Your Loved Ones</h1>
                 </div>
-                <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                <p>Vaccination plays a vital role in protecting individuals and communities from serious diseases. By getting vaccinated, you help prevent the spread of harmful viruses and bacteria. Our vaccination services ensure that people of all ages are safeguarded from health risks. We offer a wide range of vaccines, making it easy for you and your family to stay protected. Join us in creating a healthier community, one vaccination at a time. Stay safe, stay protected, and make vaccination a priority for better health.</p>
                 <div class="row g-3 pt-3">
                     <div class="col-sm-3 col-6">
                         <div class="bg-light text-center rounded-circle py-4">
@@ -80,8 +80,8 @@
 <div class="container-fluid py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Doctors</h5>
-            <h1 class="display-4">Qualified Healthcare Professionals</h1>
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Hospitals</h5>
+            <h1 class="display-4">Trusted Partner Hospitals</h1>
         </div>
         <div class="owl-carousel team-carousel position-relative">
             <div class="team-item">

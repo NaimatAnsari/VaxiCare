@@ -11,6 +11,9 @@
     <!-- Favicon -->
     <link href="img/fav" rel="icon">
 
+    <!-- Box Icon Cdn -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">  
@@ -67,43 +70,35 @@
     <!-- Topbar End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid sticky-top bg-white shadow-sm">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-                <a href="home" class="navbar-brand">
-                    <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>VaxiCare</h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="home" class="nav-item nav-link">Home</a>
-                        <a href="about" class="nav-item nav-link ">About</a>
-                        <a href="service" class="nav-item nav-link">Service</a>
-                        <a href="vaccines" class="nav-item nav-link">Vaccines</a>
-                        <a href="contact" class="nav-item nav-link">Contact</a>
-                        <a href="register" class="nav-item nav-link">Login / Register</a>
-                        
-                        {{-- <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login / Register</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                <a href="detail.html" class="dropdown-item">Blog Detail</a>
-                                <a href="team.html" class="dropdown-item">The Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="appointment.html" class="dropdown-item">Appointment</a>
-                                <a href="search.html" class="dropdown-item">Search</a>
-                            </div>
-                        </div> --}}
-                        
-                    </div>
+<!-- Navbar Start -->
+<div class="container-fluid sticky-top bg-white shadow-sm">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <a href="home" class="navbar-brand">
+                <h1 class="m-0 text-uppercase text-primary"><i class="fa fa-clinic-medical me-2"></i>VaxiCare</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0 align-items-center">
+                    <a href="home" class="nav-item nav-link">Home</a>
+                    <a href="about" class="nav-item nav-link">About</a>
+                    <a href="service" class="nav-item nav-link">Service</a>
+                    <a href="vaccines" class="nav-item nav-link">Vaccines</a>
+                    <a href="contact" class="nav-item nav-link">Contact</a>  
+                    <a href="register" class="nav-item nav-link d-flex align-items-center ">
+                        <div style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #20c5dd; border-radius: 50%;">
+                            <i class='bx bx-user' style="font-size: 20px; color: #fff;"></i>
+                        </div>
+                    </a>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </div>
-    <!-- Navbar End -->
+</div>
+<!-- Navbar End -->
+
 
 
 
@@ -174,10 +169,10 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">Your Site Name</a>. All Rights Reserved.</p>
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">VaxiCare</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p class="mb-0">Designed by <a class="text-primary" href="#">VaxiCare</a></p>
                 </div>
             </div>
         </div>

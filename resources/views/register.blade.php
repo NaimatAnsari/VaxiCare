@@ -86,7 +86,7 @@
                                     
                                     <!-- New Box to Show the Selected Image -->
                                     <div id="image-box" 
-                                         style="border: 8px solid silver; width: 150px; height: 150px; text-align: center; background-color: #f9f9f9; display: none;">
+                                         style="border: 4px dashed silver; width: 150px; height: 150px; text-align: center; background-color: #f9f9f9; display: none;">
                                         <img id="preview" src="" alt="Preview" 
                                              style="width: 100%; height: 100%; object-fit: cover; display: block;">
                                     </div>
@@ -104,6 +104,9 @@
                             </div>
                         </div>
                     </form>
+                    <div class="col-12 text-center mt-4">
+                        <p>Already have an account? <a href="login" class="text-primary">Login here</a></p>
+                    </div>
                 </div>
             </div>
         </div>

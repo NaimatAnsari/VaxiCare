@@ -20,7 +20,12 @@
                                 <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email Address" style="height: 55px;" required>
                             </div>
                             <div class="col-12">
-                                <input type="password" name="password" class="form-control bg-light border-0" placeholder="Password" style="height: 55px;" required>
+                                <div class="input-group">
+                                    <input type="password" name="password" class="form-control bg-light border-0 shadow-none" placeholder="Password" id="password"  style="height: 55px;" required>
+                                    <button class="btn border-none shadow-none bg-light" type="button" id="toggle-password" >
+                                        <i class="fa fa-eye" id="eye-icon"></i>
+                                    </button>
+                                </div>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
@@ -39,5 +44,34 @@
     </div>
 </div>
 <!-- Login End -->
+
+<script>
+
+
+
+// Show & Hide Password JS
+    
+
+document.getElementById('toggle-password').addEventListener('click', function() {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eye-icon');
+    
+    // Toggle the password visibility
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';  // Show password
+        eyeIcon.classList.remove('fa-eye');
+        eyeIcon.classList.add('fa-eye-slash');
+    } else {
+        passwordField.type = 'password';  // Hide password
+        eyeIcon.classList.remove('fa-eye-slash');
+        eyeIcon.classList.add('fa-eye');
+    }
+});
+
+
+
+
+</script>
+
 
 @endsection

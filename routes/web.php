@@ -1,35 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\userController;
 
-Route::get('/', function () {
-    return view('home');
-});
 
-Route::get('home', function () {
-    return view('home');
-});
 
-Route::get('about', function () {
-    return view('about');
-});
+Route::get('/',[userController::class,'home']);
 
-Route::get('service', function () {
-    return view('service');
-});
+Route::get('home',[userController::class,'home']);
 
-Route::get('vaccines', function () {
-    return view('vaccines');
-});
+Route::get('about',[userController::class,'about']);
 
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::get('service',[userController::class,'service']);
 
-Route::get('register', function () {
-    return view('register');
-});
+Route::get('vaccines',[userController::class,'vaccines']);
 
-Route::get('login', function () {
-    return view('login');
-});
+Route::get('contact',[userController::class,'contact']);
+
+Route::get('register',[userController::class,'register']);
+
+Route::get('login',[userController::class,'login']);

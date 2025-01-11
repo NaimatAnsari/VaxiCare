@@ -9,8 +9,8 @@
     <div class="container py-5">
         <div class="row justify-content-start">
             <div class="col-lg-8 text-center text-lg-start">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To Medinova</h5>
-                <h1 class="display-1 text-white mb-md-4">Best Healthcare Solution In Your City</h1>
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5" style="border-color: rgba(256, 256, 256, .3) !important;">Welcome To VaxiCare</h5>
+                <h1 class="display-1 text-white mb-md-4">Vaccination Management System for Everyone</h1>
                 <div class="pt-2">
                     <a href="" class="btn btn-light rounded-pill py-md-3 px-md-5 mx-2">Find Doctor</a>
                     <a href="" class="btn btn-outline-light rounded-pill py-md-3 px-md-5 mx-2">Appointment</a>
@@ -34,9 +34,9 @@
             <div class="col-lg-7">
                 <div class="mb-4">
                     <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">About Us</h5>
-                    <h1 class="display-4">Best Medical Care For Yourself and Your Family</h1>
+                    <h1 class="display-4">Comprehensive Vaccination Services for Your Loved Ones</h1>
                 </div>
-                <p>Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum et, tempor voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore. Amet erat amet et magna</p>
+                <p>Vaccination plays a vital role in protecting individuals and communities from serious diseases. By getting vaccinated, you help prevent the spread of harmful viruses and bacteria. Our vaccination services ensure that people of all ages are safeguarded from health risks. We offer a wide range of vaccines, making it easy for you and your family to stay protected. Join us in creating a healthier community, one vaccination at a time. Stay safe, stay protected, and make vaccination a priority for better health.</p>
                 <div class="row g-3 pt-3">
                     <div class="col-sm-3 col-6">
                         <div class="bg-light text-center rounded-circle py-4">
@@ -75,7 +75,7 @@
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 500px;">
             <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
-            <h1 class="display-4">Excellent Medical Services</h1>
+            <h1 class="display-4">Excellent Vaccination Services</h1>
         </div>
         <div class="row g-5">
             <div class="col-lg-4 col-md-6">
@@ -83,8 +83,8 @@
                     <div class="service-icon mb-4">
                         <i class="fa fa-2x fa-user-md text-white"></i>
                     </div>
-                    <h4 class="mb-3">Emergency Care</h4>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                    <h4 class="mb-3">Appointment Scheduling</h4>
+                    <p class="m-0">Schedule your vaccination appointments at your convenience with flexible date and time options.</p>
                     <a class="btn btn-lg btn-primary rounded-pill" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -95,8 +95,8 @@
                     <div class="service-icon mb-4">
                         <i class="fa fa-2x fa-procedures text-white"></i>
                     </div>
-                    <h4 class="mb-3">Operation & Surgery</h4>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                    <h4 class="mb-3">Vaccination Registration</h4>
+                    <p class="m-0">Easily register for vaccines online, ensuring a smooth and efficient process.</p>
                     <a class="btn btn-lg btn-primary rounded-pill" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -107,8 +107,8 @@
                     <div class="service-icon mb-4">
                         <i class="fa fa-2x fa-stethoscope text-white"></i>
                     </div>
-                    <h4 class="mb-3">Outdoor Checkup</h4>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                    <h4 class="mb-3">Vaccination Tracking</h4>
+                    <p class="m-0">Track your vaccination status and get timely reminders for booster doses.</p>
                     <a class="btn btn-lg btn-primary rounded-pill" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -119,8 +119,8 @@
                     <div class="service-icon mb-4">
                         <i class="fa fa-2x fa-ambulance text-white"></i>
                     </div>
-                    <h4 class="mb-3">Ambulance Service</h4>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                    <h4 class="mb-3">Free Transportation & Ambulance</h4>
+                    <p class="m-0">Enjoy free transportation and ambulance services for safe and timely vaccine administration.</p>
                     <a class="btn btn-lg btn-primary rounded-pill" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -131,8 +131,8 @@
                     <div class="service-icon mb-4">
                         <i class="fa fa-2x fa-pills text-white"></i>
                     </div>
-                    <h4 class="mb-3">Medicine & Pharmacy</h4>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                    <h4 class="mb-3">Emergency Vaccine Services</h4>
+                    <p class="m-0">Access emergency vaccine services during critical times for immediate protection.</p>
                     <a class="btn btn-lg btn-primary rounded-pill" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -143,8 +143,8 @@
                     <div class="service-icon mb-4">
                         <i class="fa fa-2x fa-microscope text-white"></i>
                     </div>
-                    <h4 class="mb-3">Blood Testing</h4>
-                    <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit</p>
+                    <h4 class="mb-3">Vaccine Awareness & Information</h4>
+                    <p class="m-0">Get accurate and reliable information about vaccines, their benefits, and side effects.</p>
                     <a class="btn btn-lg btn-primary rounded-pill" href="">
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -313,8 +313,8 @@
 <div class="container-fluid py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Doctors</h5>
-            <h1 class="display-4">Qualified Healthcare Professionals</h1>
+            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Our Hospitals</h5>
+            <h1 class="display-4">Trusted Partner Hospitals</h1>
         </div>
         <div class="owl-carousel team-carousel position-relative">
             <div class="team-item">
@@ -460,7 +460,7 @@
 
 
 <!-- Blog Start -->
-<div class="container-fluid py-5">
+{{-- <div class="container-fluid py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5" style="max-width: 500px;">
             <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
@@ -529,7 +529,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Blog End -->
 
 
