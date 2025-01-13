@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('user.layout')
 
 @section('content')
 
@@ -13,7 +13,7 @@
             <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
                 <div class="bg-light rounded text-center">
                     <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-1.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="user/img/price-1.jpg" alt="">
                         <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                             <h3 class="text-primary">Pregnancy Care</h3>
                             <h1 class="display-4 text-white mb-0">
@@ -31,7 +31,7 @@
                 </div>
                 <div class="bg-light rounded text-center">
                     <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-2.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="user/img/price-2.jpg" alt="">
                         <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                             <h3 class="text-primary">Health Checkup</h3>
                             <h1 class="display-4 text-white mb-0">
@@ -49,7 +49,7 @@
                 </div>
                 <div class="bg-light rounded text-center">
                     <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-3.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="user/img/price-3.jpg" alt="">
                         <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                             <h3 class="text-primary">Dental Care</h3>
                             <h1 class="display-4 text-white mb-0">
@@ -67,7 +67,7 @@
                 </div>
                 <div class="bg-light rounded text-center">
                     <div class="position-relative">
-                        <img class="img-fluid rounded-top" src="img/price-4.jpg" alt="">
+                        <img class="img-fluid rounded-top" src="user/img/price-4.jpg" alt="">
                         <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                             <h3 class="text-primary">Operation & Surgery</h3>
                             <h1 class="display-4 text-white mb-0">
@@ -167,7 +167,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="img/team-1.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="user/img/team-1.jpg" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -186,7 +186,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="img/team-2.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="user/img/team-2.jpg" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -205,7 +205,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="img/team-3.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="user/img/team-3.jpg" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">

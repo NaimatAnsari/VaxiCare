@@ -8,46 +8,46 @@ class userController extends Controller
 {
     public function home()
     {
-        return view('home');
+        return view('user.home');
     }
 
     public function about()
     {
-        return view('about');
+        return view('user.about');
     }
 
     public function service()
     {
-        return view('service');
+        return view('user.service');
     }
 
     public function vaccines()
     {
-        return view('vaccines');
+        return view('user.vaccines');
     }
 
     public function contact()
     {
-        return view('contact');
+        return view('user.contact');
     }
 
     public function register()
     {
-        return view('register');
+        return view('user.register');
     }
 
     public function login()
     {
-        return view('login');
+        return view('user.login');
     }
 
     public function forgetPassword()
     {
-        return view('forgetPassword');
+        return view('user.forgetPassword');
     }
 
     public function resetPassword()
     {
-        return view('resetPassword');
+        return view('user.resetPassword');
     }
 }

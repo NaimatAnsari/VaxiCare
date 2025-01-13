@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('user.layout')
 
 
 @section('content')
@@ -28,7 +28,7 @@
         <div class="row gx-5">
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded" src="img/about.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 rounded" src="{{asset('user/img/about.jpg')}}" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -233,7 +233,7 @@
         <div class="owl-carousel price-carousel position-relative" style="padding: 0 45px 45px 45px;">
             <div class="bg-light rounded text-center">
                 <div class="position-relative">
-                    <img class="img-fluid rounded-top" src="img/price-1.jpg" alt="">
+                    <img class="img-fluid rounded-top" src="{{ asset('user/img/price-1.jpg') }}" alt="">
                     <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                         <h3 class="text-white">Pregnancy Care</h3>
                         <h1 class="display-4 text-white mb-0">
@@ -251,7 +251,7 @@
             </div>
             <div class="bg-light rounded text-center">
                 <div class="position-relative">
-                    <img class="img-fluid rounded-top" src="img/price-2.jpg" alt="">
+                    <img class="img-fluid rounded-top" src="{{ asset('user/img/price-2.jpg') }}" alt="">
                     <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                         <h3 class="text-white">Health Checkup</h3>
                         <h1 class="display-4 text-white mb-0">
@@ -269,7 +269,7 @@
             </div>
             <div class="bg-light rounded text-center">
                 <div class="position-relative">
-                    <img class="img-fluid rounded-top" src="img/price-3.jpg" alt="">
+                    <img class="img-fluid rounded-top" src="{{ asset('user/img/price-3.jpg') }}" alt="">
                     <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                         <h3 class="text-white">Dental Care</h3>
                         <h1 class="display-4 text-white mb-0">
@@ -287,7 +287,7 @@
             </div>
             <div class="bg-light rounded text-center">
                 <div class="position-relative">
-                    <img class="img-fluid rounded-top" src="img/price-4.jpg" alt="">
+                    <img class="img-fluid rounded-top" src="{{ asset('user/img/price-4.jpg') }}" alt="">
                     <div class="position-absolute w-100 h-100 top-50 start-50 translate-middle rounded-top d-flex flex-column align-items-center justify-content-center" style="background: rgba(29, 42, 77, .8);">
                         <h3 class="text-white">Operation & Surgery</h3>
                         <h1 class="display-4 text-white mb-0">
@@ -320,7 +320,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="img/team-1.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="{{ asset('user/img/team-1.jpg') }}" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -339,7 +339,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="img/team-2.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="{{ asset('user/img/team-2.jpg') }}" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -358,7 +358,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="img/team-3.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="{{ asset('user/img/team-3.jpg') }}" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -380,31 +380,6 @@
 <!-- Team End -->
 
 
-<!-- Search Start -->
-<div class="container-fluid bg-primary my-5 py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-            <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Find A Doctor</h5>
-            <h1 class="display-4 mb-4">Find A Healthcare Professionals</h1>
-            <h5 class="text-white fw-normal">Duo ipsum erat stet dolor sea ut nonumy tempor. Tempor duo lorem eos sit sed ipsum takimata ipsum sit est. Ipsum ea voluptua ipsum sit justo</h5>
-        </div>
-        <div class="mx-auto" style="width: 100%; max-width: 600px;">
-            <div class="input-group">
-                <select class="form-select border-primary w-25" style="height: 60px;">
-                    <option selected>Department</option>
-                    <option value="1">Department 1</option>
-                    <option value="2">Department 2</option>
-                    <option value="3">Department 3</option>
-                </select>
-                <input type="text" class="form-control border-primary w-50" placeholder="Keyword">
-                <button class="btn btn-dark border-0 w-25">Search</button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Search End -->
-
-
 <!-- Testimonial Start -->
 <div class="container-fluid py-5">
     <div class="container">
@@ -417,7 +392,7 @@
                 <div class="owl-carousel testimonial-carousel">
                     <div class="testimonial-item text-center">
                         <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-1.jpg" alt="">
+                            <img class="img-fluid rounded-circle mx-auto" src="{{ asset('user/img/testimonial-1.jpg') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                 <i class="fa fa-quote-left fa-2x text-primary"></i>
                             </div>
@@ -429,7 +404,7 @@
                     </div>
                     <div class="testimonial-item text-center">
                         <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-2.jpg" alt="">
+                            <img class="img-fluid rounded-circle mx-auto" src="{{ asset('user/img/testimonial-2.jpg') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                 <i class="fa fa-quote-left fa-2x text-primary"></i>
                             </div>
@@ -441,7 +416,7 @@
                     </div>
                     <div class="testimonial-item text-center">
                         <div class="position-relative mb-5">
-                            <img class="img-fluid rounded-circle mx-auto" src="img/testimonial-3.jpg" alt="">
+                            <img class="img-fluid rounded-circle mx-auto" src="{{ asset('user/img/testimonial-3.jpg') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                 <i class="fa fa-quote-left fa-2x text-primary"></i>
                             </div>
@@ -459,78 +434,6 @@
 <!-- Testimonial End -->
 
 
-<!-- Blog Start -->
-{{-- <div class="container-fluid py-5">
-    <div class="container">
-        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-            <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Blog Post</h5>
-            <h1 class="display-4">Our Latest Medical Blog Posts</h1>
-        </div>
-        <div class="row g-5">
-            <div class="col-xl-4 col-lg-6">
-                <div class="bg-light rounded overflow-hidden">
-                    <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                    <div class="p-4">
-                        <a class="h3 d-block mb-3" href="">Dolor clita vero elitr sea stet dolor justo  diam</a>
-                        <p class="m-0">Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna
-                            rebum clita rebum dolor stet amet justo</p>
-                    </div>
-                    <div class="d-flex justify-content-between border-top p-4">
-                        <div class="d-flex align-items-center">
-                            <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
-                            <small>John Doe</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
-                            <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="bg-light rounded overflow-hidden">
-                    <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
-                    <div class="p-4">
-                        <a class="h3 d-block mb-3" href="">Dolor clita vero elitr sea stet dolor justo  diam</a>
-                        <p class="m-0">Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna
-                            rebum clita rebum dolor stet amet justo</p>
-                    </div>
-                    <div class="d-flex justify-content-between border-top p-4">
-                        <div class="d-flex align-items-center">
-                            <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
-                            <small>John Doe</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
-                            <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-4 col-lg-6">
-                <div class="bg-light rounded overflow-hidden">
-                    <img class="img-fluid w-100" src="img/blog-3.jpg" alt="">
-                    <div class="p-4">
-                        <a class="h3 d-block mb-3" href="">Dolor clita vero elitr sea stet dolor justo  diam</a>
-                        <p class="m-0">Dolor lorem eos dolor duo et eirmod sea. Dolor sit magna
-                            rebum clita rebum dolor stet amet justo</p>
-                    </div>
-                    <div class="d-flex justify-content-between border-top p-4">
-                        <div class="d-flex align-items-center">
-                            <img class="rounded-circle me-2" src="img/user.jpg" width="25" height="25" alt="">
-                            <small>John Doe</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <small class="ms-3"><i class="far fa-eye text-primary me-1"></i>12345</small>
-                            <small class="ms-3"><i class="far fa-comment text-primary me-1"></i>123</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-<!-- Blog End -->
 
 
 
