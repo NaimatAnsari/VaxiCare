@@ -20,3 +20,7 @@ Route::get('contact',[userController::class,'contact']);
 Route::get('register',[userController::class,'register']);
 
 Route::get('login',[userController::class,'login']);
+
+Route::get('forgetPassword',[userController::class,'forgetPassword']);
+
+Route::get('resetPassword',[userController::class,'resetPassword']);

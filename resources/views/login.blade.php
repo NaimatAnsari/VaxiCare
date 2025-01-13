@@ -30,9 +30,9 @@
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
                             </div>
-                            <div class="col-12 text-center mt-3">
-                                <a href="#" class="text-decoration-none">Forgot Password?</a>
-                            </div>
+                            {{-- <div class="col-12 text-center mt-3">
+                                <a href="forgetPassword" class="text-decoration-none">Forgot Password?</a>
+                            </div> --}}
                             <div class="col-12 text-center mt-2">
                                 <p>Don't have an account? <a href="/register" class="text-decoration-none">Register Here</a></p>
                             </div>

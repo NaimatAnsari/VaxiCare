@@ -40,4 +40,14 @@ class userController extends Controller
     {
         return view('login');
     }
+
+    public function forgetPassword()
+    {
+        return view('forgetPassword');
+    }
+
+    public function resetPassword()
+    {
+        return view('resetPassword');
+    }
 }
