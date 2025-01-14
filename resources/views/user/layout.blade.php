@@ -88,11 +88,29 @@
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="vaccines" class="nav-item nav-link">Vaccines</a>
                         <a href="contact" class="nav-item nav-link">Contact</a>  
-                        <a href="register" class="nav-item nav-link d-flex align-items-center ">
-                            <div style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #20c5dd; border-radius: 50%;">
-                                <i class='bx bx-user' style="font-size: 20px; color: #fff;"></i>
-                            </div>
-                        </a>
+                        <div class="nav-item dropdown">
+                            <a 
+                                href="#" 
+                                class="nav-link dropdown-toggle d-flex align-items-center" 
+                                id="userDropdown" 
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                            >
+                                <div 
+                                    style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #20c5dd; border-radius: 50%;"
+                                >
+                                    <i class='bx bx-user' style="font-size: 20px; color: #fff;"></i>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="register">Profile</a></li>
+                                <li><a class="dropdown-item" href="register">Register</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login">Login</a></li>
+                            </ul>
+                        </div>
+                        
                     </div>
                 </div>
             </nav>
