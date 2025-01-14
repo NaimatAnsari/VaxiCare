@@ -9,7 +9,7 @@
         <div class="row gx-5">
             <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
                 <div class="position-relative h-100">
-                    <img class="position-absolute w-100 h-100 rounded" src="user/img/about.jpg" style="object-fit: cover;">
+                    <img class="position-absolute w-100 h-100 rounded" src="{{ asset('user/img/about.jpg') }}" style="object-fit: cover;">
                 </div>
             </div>
             <div class="col-lg-7">
@@ -87,7 +87,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="user/img/team-1.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="{{ asset('user/img/team-1.jpg') }}" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -106,7 +106,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="user/img/team-2.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="{{ asset('user/img/team-2.jpg') }}" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">
@@ -125,7 +125,7 @@
             <div class="team-item">
                 <div class="row g-0 bg-light rounded overflow-hidden">
                     <div class="col-12 col-sm-5 h-100">
-                        <img class="img-fluid h-100" src="user/img/team-3.jpg" style="object-fit: cover;">
+                        <img class="img-fluid h-100" src="{{ asset('user/img/team-3.jpg') }}" style="object-fit: cover;">
                     </div>
                     <div class="col-12 col-sm-7 h-100 d-flex flex-column">
                         <div class="mt-auto p-4">

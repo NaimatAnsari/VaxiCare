@@ -168,7 +168,7 @@
                     <div class="owl-carousel testimonial-carousel">
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="user/img/testimonial-1.jpg" alt="">
+                                <img class="img-fluid rounded-circle mx-auto" src="{{ asset('user/img/testimonial-1.jpg') }}" alt="">
                                 <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
@@ -180,7 +180,7 @@
                         </div>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="user/img/testimonial-2.jpg" alt="">
+                                <img class="img-fluid rounded-circle mx-auto" src="{{ asset('user/img/testimonial-2.jpg') }}" alt="">
                                 <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
@@ -192,7 +192,7 @@
                         </div>
                         <div class="testimonial-item text-center">
                             <div class="position-relative mb-5">
-                                <img class="img-fluid rounded-circle mx-auto" src="user/img/testimonial-3.jpg" alt="">
+                                <img class="img-fluid rounded-circle mx-auto" src="{{ asset('user/img/testimonial-3.jpg') }}" alt="">
                                 <div class="position-absolute top-100 start-50 translate-middle d-flex align-items-center justify-content-center bg-white rounded-circle" style="width: 60px; height: 60px;">
                                     <i class="fa fa-quote-left fa-2x text-primary"></i>
                                 </div>
