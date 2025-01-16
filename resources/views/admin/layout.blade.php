@@ -146,19 +146,29 @@
 						<li id="childrenDetail">
                             <a href="childrenDetail"><i class="fa fa-user-md"></i> <span>Children Detials</span></a>
                         </li>
-                        <li>
-                            <a href="patients.html"><i class="fa fa-wheelchair"></i> <span>Vaccines Management</span></a>
-                        </li>
+                        <li class="submenu">
+							<a href="#"><i class="fa fa-user"></i> <span>Vaccines</span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="employees.html">Vaccination Schedule</a></li>
+								<li><a href="leaves.html">Vaccination Reports</a></li>
+								<li><a href="holidays.html">Vaccine Inventory</a></li>
+							</ul>
+						</li>
                         <li>
                             <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Parent Request</span></a>
                         </li>
-                        <li>
-                            <a href="schedule.html"><i class="fa fa-calendar-check-o"></i> <span>Hospital Management</span></a>
-                        </li>
+                        <li class="submenu">
+							<a href="#"><i class="fa fa-user"></i> <span> Hospital Management</span> <span class="menu-arrow"></span></a>
+							<ul style="display: none;">
+								<li><a href="employees.html">Add Hospital</a></li>
+								<li><a href="leaves.html">Manage Hospitals</a></li>
+								<li><a href="holidays.html">List of Hospitals</a></li>
+							</ul>
+						</li>
                         <li>
                             <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Reports</span></a>
                         </li>
-						<li class="submenu">
+						{{--<li class="submenu">
 							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="employees.html">Employees List</a></li>
@@ -228,7 +238,7 @@
                         <li>
                             <a href="settings.html"><i class="fa fa-cog"></i> <span>Settings</span></a>
                         </li>
-                        <li class="menu-title">UI Elements</li>
+                         <li class="menu-title">UI Elements</li>
                         <li class="submenu">
                             <a href="#"><i class="fa fa-laptop"></i> <span> Components</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
@@ -255,7 +265,7 @@
                         </li>
                         <li>
                             <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
-                        </li>
+                        </li> 
                         <li class="menu-title">Extras</li>
                         <li class="submenu">
                             <a href="#"><i class="fa fa-columns"></i> <span>Pages</span> <span class="menu-arrow"></span></a>
@@ -272,7 +282,7 @@
                                 <li><a href="blank-page.html"> Blank Page </a></li>
                             </ul>
                         </li>
-                        <li class="submenu">
+                         <li class="submenu">
                             <a href="javascript:void(0);"><i class="fa fa-share-alt"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
                             <ul style="display: none;">
                                 <li class="submenu">
@@ -293,7 +303,7 @@
                                     <a href="javascript:void(0);"><span>Level 1</span></a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
