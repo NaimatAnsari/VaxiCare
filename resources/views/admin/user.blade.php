@@ -6,22 +6,22 @@
 <div class="content">
     <div class="row">
         <div class="col-sm-4 col-3">
-            <h4 class="page-title">Children Detials</h4>
+            <h4 class="page-title">User Details</h4>
         </div>
         <div class="col-sm-8 col-9 text-right m-b-20">
-            <a href="addChildren" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Add Children</a>
+            <a href="addUser" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Add User</a>
         </div>
     </div>
     <div class="row filter-row">
         <div class="col-sm-6 col-md-3">
             <div class="form-group form-focus">
-                <label class="focus-label">Children ID</label>
+                <label class="focus-label">User ID</label>
                 <input type="text" class="form-control floating">
             </div>
         </div>
         <div class="col-sm-6 col-md-3">
             <div class="form-group form-focus">
-                <label class="focus-label">Children Name</label>
+                <label class="focus-label">User Name</label>
                 <input type="text" class="form-control floating">
             </div>
         </div>
@@ -48,11 +48,12 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
-                            <th>Parent ID</th>
-                            <th>Name</th>
-                            <th>Date Of Birth</th>
-                            <th>Gender</th>
-                            <th>Vaccination Status</th>
+                            <th>Full Name</th>
+                            <th>Address</th>
+                            <th>Role</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Picture</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                             <th class="text-right">Action</th>
@@ -60,11 +61,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>APT0001</td>
-                            <td>Henry Daniels</td>
-                            <td>2024/10/08</td>
-                            <td>Male</td>
-                            <td><span class="custom-badge status-red">Inactive</span></td>
+                            <td>John Doe</td>
+                            <td>Street no 32 , Los Angles</td>
+                            <td>User</td>
+                            <td>johndoe423@gmail.com</td>
+                            <td>12345678</td>
+                            <td>&nbsp; <img width="50" height="50" src="admin/img/user.jpg" class="rounded-circle m-r-5" alt=""> </td>
                             <td>11:00am</td>
                             <td>12:00am</td>
                             <td class="text-right">
@@ -79,11 +81,12 @@
                         </tr>
                         
                         <tr>
-                            <td>APT0001</td>
-                            <td>Henry Daniels</td>
-                            <td>2024/10/08</td>
-                            <td>Male</td>
-                            <td><span class="custom-badge status-red">Inactive</span></td>
+                            <td>John Doe</td>
+                            <td>Street no 32 , Los Angles</td>
+                            <td>User</td>
+                            <td>johndoe423@gmail.com</td>
+                            <td>12345678</td>
+                            <td>&nbsp; <img width="50" height="50" src="admin/img/user.jpg" class="rounded-circle m-r-5" alt=""> </td>
                             <td>11:00am</td>
                             <td>12:00am</td>
                             <td class="text-right">

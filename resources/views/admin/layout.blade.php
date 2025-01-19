@@ -141,32 +141,31 @@
                     <ul>
                         <li class="menu-title">Main</li>
                         <li id="dashboard">
-                            <a href="vaxicare"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                            <a href="vaxicare"><i class="bx bxs-dashboard"></i> <span>Dashboard</span></a>
                         </li>
+                        <li id="userDetail">
+                            <a href="userDetail"><i class='bx bxs-user-circle'></i> <span>User Management</span></a>
+                        </li>
+                        
 						<li id="childrenDetail">
-                            <a href="childrenDetail"><i class="fa fa-user-md"></i> <span>Children Detials</span></a>
+                            <a href="childrenDetail"><i class="bx bxs-user"></i> <span>Children Detials</span></a>
                         </li>
                         <li class="submenu">
-							<a href="#"><i class="fa fa-user"></i> <span>Vaccines</span> <span class="menu-arrow"></span></a>
+							<a href="#"><i class="bx bx-injection"></i> <span>Vaccines</span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
-								<li><a href="employees.html">Vaccination Schedule</a></li>
+								<li><a href="vaccinationShedule">Vaccination Schedule</a></li>
 								<li><a href="leaves.html">Vaccination Reports</a></li>
 								<li><a href="holidays.html">Vaccine Inventory</a></li>
 							</ul>
 						</li>
                         <li>
-                            <a href="appointments.html"><i class="fa fa-calendar"></i> <span>Parent Request</span></a>
+                            <a href="appointments.html"><i class='bx bxs-user-detail'></i> <span>Parent Request</span></a>
                         </li>
-                        <li class="submenu">
-							<a href="#"><i class="fa fa-user"></i> <span> Hospital Management</span> <span class="menu-arrow"></span></a>
-							<ul style="display: none;">
-								<li><a href="employees.html">Add Hospital</a></li>
-								<li><a href="leaves.html">Manage Hospitals</a></li>
-								<li><a href="holidays.html">List of Hospitals</a></li>
-							</ul>
-						</li>
                         <li>
-                            <a href="departments.html"><i class="fa fa-hospital-o"></i> <span>Reports</span></a>
+                            <a href="hospital"><i class='fa fa-hospital-o'></i> <span> Hospital Management</span></a>
+                        </li>
+                        <li>
+                            <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Reports</span></a>
                         </li>
 						{{--<li class="submenu">
 							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>

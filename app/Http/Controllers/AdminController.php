@@ -22,5 +22,22 @@ class AdminController extends Controller
         return view('admin.edit-childrenDetail');   
     }
 
+    public function userDetail(){
+        return view('admin.user');   
+    }
+
+    public function addUser(){
+        return view('admin.add-user');   
+    }
+
+    public function vaccinationShedule(){
+        return view('admin.vaccinationShedule');   
+    }
+
+    public function hospital(){
+        return view('admin.hospital');   
+    }
+
+    
     
 }

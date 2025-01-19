@@ -6,7 +6,7 @@
 <div class="content">
     <div class="row">
         <div class="col-sm-4 col-3">
-            <h4 class="page-title">Children Detials</h4>
+            <h4 class="page-title">Vaccination Shedule</h4>
         </div>
         <div class="col-sm-8 col-9 text-right m-b-20">
             <a href="addChildren" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Add Children</a>
@@ -48,11 +48,10 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
-                            <th>Parent ID</th>
-                            <th>Name</th>
-                            <th>Date Of Birth</th>
-                            <th>Gender</th>
-                            <th>Vaccination Status</th>
+                            <th>Child ID</th>
+                            <th>Vaccine ID</th>
+                            <th>Vaccination Date</th>
+                            <th>Status</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                             <th class="text-right">Action</th>
@@ -61,9 +60,8 @@
                     <tbody>
                         <tr>
                             <td>APT0001</td>
-                            <td>Henry Daniels</td>
+                            <td>APT0001</td>
                             <td>2024/10/08</td>
-                            <td>Male</td>
                             <td><span class="custom-badge status-red">Inactive</span></td>
                             <td>11:00am</td>
                             <td>12:00am</td>
@@ -80,9 +78,8 @@
                         
                         <tr>
                             <td>APT0001</td>
-                            <td>Henry Daniels</td>
+                            <td>APT0001</td>
                             <td>2024/10/08</td>
-                            <td>Male</td>
                             <td><span class="custom-badge status-red">Inactive</span></td>
                             <td>11:00am</td>
                             <td>12:00am</td>
@@ -96,7 +93,6 @@
                                 </div>
                             </td>
                         </tr>
-                        
 
                     </tbody>
                 </table>
