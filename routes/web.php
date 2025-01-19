@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\userController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Routing\Route as RoutingRoute;
 
@@ -17,7 +18,8 @@ Route::get('vaccines',[UserController::class,'vaccines']);
 
 Route::get('contact',[UserController::class,'contact']);
 
-Route::get('register',[UserController::class,'register']);
+Route::resource('users', UsersController::class);
+
 
 Route::get('login',[UserController::class,'login']);
 

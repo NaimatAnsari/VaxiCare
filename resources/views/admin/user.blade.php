@@ -25,22 +25,7 @@
                 <input type="text" class="form-control floating">
             </div>
         </div>
-        {{-- <div class="col-sm-6 col-md-3">
-            <div class="form-group form-focus select-focus">
-                <label class="focus-label">Role</label>
-                <select class="select floating">
-                    <option>Select Role</option>
-                    <option>Nurse</option>
-                    <option>Pharmacist</option>
-                    <option>Laboratorist</option>
-                    <option>Accountant</option>
-                    <option>Receptionist</option>
-                </select>
-            </div>
-        </div> --}}
-        <div class="col-sm-6 col-md-3">
-            <a href="#" class="btn btn-success btn-block"> Search </a>
-        </div>
+        
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -48,6 +33,7 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>Full Name</th>
                             <th>Address</th>
                             <th>Role</th>
@@ -60,15 +46,18 @@
                         </tr>
                     </thead>
                     <tbody>
+
+                        @foreach ($users as $user)
                         <tr>
-                            <td>John Doe</td>
-                            <td>Street no 32 , Los Angles</td>
-                            <td>User</td>
-                            <td>johndoe423@gmail.com</td>
-                            <td>12345678</td>
-                            <td>&nbsp; <img width="50" height="50" src="admin/img/user.jpg" class="rounded-circle m-r-5" alt=""> </td>
-                            <td>11:00am</td>
-                            <td>12:00am</td>
+                            <td style="white-space: nowrap;">{{$user->id}}</td>
+                            <td style="white-space: nowrap;">{{$user->fullname}}</td>
+                            <td style="white-space: nowrap;">{{$user->address}}</td>
+                            <td style="white-space: nowrap;">{{$user->role}}</td>
+                            <td style="white-space: nowrap;">{{$user->email}}</td>
+                            <td style="white-space: nowrap;">{{$user->password}}</td>
+                            <td>&nbsp; <img width="100" height="100" src="{{ asset('storage/' . $user->picture) }}" class="rounded-circle m-r-5" alt=""> </td>
+                            <td style="white-space: nowrap;">{{$user->created_at}}</td>
+                            <td style="white-space: nowrap;">{{$user->updated_at}}</td>
                             <td class="text-right">
                                 <div class="dropdown dropdown-action">
                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -79,26 +68,9 @@
                                 </div>
                             </td>
                         </tr>
-                        
-                        <tr>
-                            <td>John Doe</td>
-                            <td>Street no 32 , Los Angles</td>
-                            <td>User</td>
-                            <td>johndoe423@gmail.com</td>
-                            <td>12345678</td>
-                            <td>&nbsp; <img width="50" height="50" src="admin/img/user.jpg" class="rounded-circle m-r-5" alt=""> </td>
-                            <td>11:00am</td>
-                            <td>12:00am</td>
-                            <td class="text-right">
-                                <div class="dropdown dropdown-action">
-                                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                                    <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="editChildren"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_appointment"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
+                            
+                        @endforeach
+
                         
 
                     </tbody>

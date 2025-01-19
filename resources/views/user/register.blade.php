@@ -43,10 +43,11 @@
                         <p>Fill in the details below to create your account. Whether you're a parent, a hospital, or an admin, joining us is quick and easy!</p>
                     </div>
                     
-                    <form method="POST" action="" enctype="multipart/form-data">
+                    <form method="POST" action="{{route('users.store')}}" enctype="multipart/form-data">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-12 ">
-                                <input type="text" name="name" class="form-control bg-light border-0 shadow-none" placeholder="Full Name" style="height: 55px;"  pattern="[A-Za-z\s]+" title="Please enter a Valid Name" required>
+                                <input type="text" name="fullname" class="form-control bg-light border-0 shadow-none" placeholder="Full Name" style="height: 55px;"  pattern="[A-Za-z\s]+" title="Please enter a Valid Name" required>
                             </div>
                             <div class="col-12 ">
                                 <input type="text" name="address" class="form-control bg-light border-0 shadow-none" placeholder="Address" style="height: 55px;" required>
