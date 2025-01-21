@@ -18,6 +18,12 @@ Route::get('vaccines',[UserController::class,'vaccines']);
 
 Route::get('contact',[UserController::class,'contact']);
 
+Route::get('child',[UserController::class,'dashboard']);
+
+
+Route::get('appointment',[UserController::class,'appoint']);
+
+
 Route::resource('users', UsersController::class);
 
 
@@ -26,6 +32,10 @@ Route::get('login',[UserController::class,'login']);
 Route::get('forgetPassword',[UserController::class,'forgetPassword']);
 
 Route::get('resetPassword',[UserController::class,'resetPassword']);
+
+Route::get('dashboard',[UserController::class,'dashboard']);
+
+
 
 
 // Admin Routing

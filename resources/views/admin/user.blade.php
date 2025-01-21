@@ -55,14 +55,14 @@
                             <td style="white-space: nowrap;">{{$user->role}}</td>
                             <td style="white-space: nowrap;">{{$user->email}}</td>
                             <td style="white-space: nowrap;">{{$user->password}}</td>
-                            <td>&nbsp; <img width="100" height="100" src="{{ asset('storage/' . $user->picture) }}" class="rounded-circle m-r-5" alt=""> </td>
+                            <td>&nbsp; <img width="100" height="100" src="{{ asset('storage/' . $user->picture) }}" class="rounded-circle m-r-5" alt="{{$user->fullname}}"> </td>
                             <td style="white-space: nowrap;">{{$user->created_at}}</td>
                             <td style="white-space: nowrap;">{{$user->updated_at}}</td>
                             <td class="text-right">
                                 <div class="dropdown dropdown-action">
                                     <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        <a class="dropdown-item" href="editChildren"><i class="fa fa-pencil m-r-5"></i> Edit</a>
+                                        <a class="dropdown-item" href="{{ route('users.edit',$user->id)}}"><i class="fa fa-pencil m-r-5"></i> Edit</a>
                                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_appointment"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
                                     </div>
                                 </div>

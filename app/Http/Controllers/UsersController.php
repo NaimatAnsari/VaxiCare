@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User ;
+use Illuminate\Support\Facades\Storage;
 
 
 class UsersController extends Controller
@@ -29,7 +30,7 @@ class UsersController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-{
+    {
 
     // Handle picture upload
     $picturePath = null;
@@ -48,7 +49,7 @@ class UsersController extends Controller
     ]);
 
     return redirect()->route('user.login')->with('success', 'User registered successfully.');
-}
+    }
     /**
      * Display the specified resource.
      */
@@ -60,17 +61,40 @@ class UsersController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(User $user)
     {
-        //
+        return view('admin.edit-user',compact('user'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, User $user)
     {
-        //
+        // Validate the incoming request to ensure the picture is a valid file
+        $request->validate([
+            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+    
+        // Check if a new picture is uploaded
+        if ($request->hasFile('picture') && $request->file('picture')->isValid()) {
+            // Delete the old picture from storage (if exists)
+            if ($user->picture) {
+                Storage::disk('public')->delete($user->picture);
+            }
+            
+            // Store the new picture and get the path
+            $picturePath = $request->file('picture')->store('pictures', 'public');
+            
+            // Update the picture path in the request
+            $request->merge(['picture' => $picturePath]);
+        }
+    
+        // Update other user data (including picture if uploaded)
+        $user->update($request->all());
+    
+        // Redirect or return the updated view
+        return view('admin.user');
     }
 
     /**

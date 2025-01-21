@@ -14,6 +14,8 @@
     <!-- Box Icon Link -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
+     <!-- Font Awesome CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,6 +34,8 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('user/css/style.css') }}" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -87,7 +91,10 @@
                         <a href="about" class="nav-item nav-link">About</a>
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="vaccines" class="nav-item nav-link">Vaccines</a>
-                        <a href="contact" class="nav-item nav-link">Contact</a>  
+                        <a href="contact" class="nav-item nav-link">Feedback</a>
+                        <a href="contact" class="nav-item nav-link">Contact</a> 
+                        <a href="contact" class="nav-item nav-link">Children</a>
+                        <a href="contact" class="nav-item nav-link">Appointment</a> 
                         <div class="nav-item dropdown">
                             <a 
                                 href="#" 
@@ -206,6 +213,9 @@
 
 <!-- Template Javascript -->
 <script src="{{ asset('user/js/main.js') }} "></script>
+
+
+
 </body>
 
 </html>

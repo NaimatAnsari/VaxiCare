@@ -143,8 +143,8 @@
                         <li id="dashboard">
                             <a href="vaxicare"><i class="bx bxs-dashboard"></i> <span>Dashboard</span></a>
                         </li>
-                        <li id="userDetail">
-                            <a href="userDetail"><i class='bx bxs-user-circle'></i> <span>User Management</span></a>
+                        <li id="{{ route('users.index')}}">
+                            <a href="{{ route('users.index')}}"><i class='bx bxs-user-circle'></i> <span>User Management</span></a>
                         </li>
                         
 						<li id="childrenDetail">

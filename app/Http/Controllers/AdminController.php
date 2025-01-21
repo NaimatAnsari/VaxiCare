@@ -23,11 +23,11 @@ class AdminController extends Controller
         return view('admin.edit-childrenDetail');   
     }
 
-    public function userDetail()
-    {
-        $users = User::all();
-        return view('admin.user', compact('users'));
-    }
+    // public function userDetail()
+    // {
+    //     $users = User::all();
+    //     return view('admin.user', compact('users'));
+    // }
 
     public function addUser(){
         return view('admin.add-user');   

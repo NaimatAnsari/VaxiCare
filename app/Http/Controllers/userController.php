@@ -50,4 +50,14 @@ class UserController extends Controller
     {
         return view('user.resetPassword');
     }
+
+    public function dashboard()
+    {
+        return view('user.childern');
+    }
+
+    public function appoint()
+    {
+        return view('user.appointment');
+    }
 }
