@@ -60,4 +60,14 @@ class UserController extends Controller
     {
         return view('user.appointment');
     }
+
+    public function bookappoint()
+    {
+        return view('user.bookappiontment');
+    }
+
+    public function feedback()
+    {
+        return view('user.feedback');
+    }
 }

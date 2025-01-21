@@ -24,6 +24,13 @@ Route::get('child',[UserController::class,'dashboard']);
 Route::get('appointment',[UserController::class,'appoint']);
 
 
+Route::get('bookappoint',[UserController::class,'bookappoint']);
+
+
+Route::get('feedback',[UserController::class,'feedback']);
+
+
+
 Route::resource('users', UsersController::class);
 
 

@@ -2,72 +2,113 @@
 
 @section('content')
     
+<style>
+  .hover-red {
+    color: red;         /* Optional: Adjust text color */
+  }
 
-<!-- Appointment Start -->
-<div class="container-fluid py-5">
-    <div class="container">
-        <div class="row gx-5">
-            <div class="col-lg-6 mb-5 mb-lg-0">
-                <div class="mb-4">
-                    <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Appointment</h5>
-                    <h1 class="display-4">Make An Appointment For Your Family</h1>
-                </div>
-                <p class="mb-5">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
-                <a class="btn btn-primary rounded-pill py-3 px-5 me-3" href="">Find Doctor</a>
-                <a class="btn btn-outline-primary rounded-pill py-3 px-5" href="">Read More</a>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-light text-center rounded p-5">
-                    <h1 class="mb-4">Book An Appointment</h1>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select bg-white border-0" style="height: 55px;">
-                                    <option selected>Choose Department</option>
-                                    <option value="1">Department 1</option>
-                                    <option value="2">Department 2</option>
-                                    <option value="3">Department 3</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select bg-white border-0" style="height: 55px;">
-                                    <option selected>Select Doctor</option>
-                                    <option value="1">Doctor 1</option>
-                                    <option value="2">Doctor 2</option>
-                                    <option value="3">Doctor 3</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control bg-white border-0" placeholder="Your Name" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control bg-white border-0" placeholder="Your Email" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <input type="text"
-                                        class="form-control bg-white border-0 datetimepicker-input"
-                                        placeholder="Date" data-target="#date" data-toggle="datetimepicker" style="height: 55px;">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="time" id="time" data-target-input="nearest">
-                                    <input type="text"
-                                        class="form-control bg-white border-0 datetimepicker-input"
-                                        placeholder="Time" data-target="#time" data-toggle="datetimepicker" style="height: 55px;">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button class="btn btn-primary w-100 py-3" type="submit">Make An Appointment</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+  .hover-green {
+    color: #3CB371;         /* Optional: Adjust text color */
+  }
+</style>
+<body>
+    <div class="text-center mx-auto mb-5 mt-5" style="max-width: 500px;">
+        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Book Appointment</h5>
+        <h1 class="display-4">Schedule Your Appointment</h1>
     </div>
-</div>
-<!-- Appointment End -->
+
+    <div class="container">
+      {{-- <?php
+      if (isset($_GET['msg'])) {
+        $msg = $_GET['msg'];
+        echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+        '. $msg .'
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>';
+      }
+      ?> --}}
+        <a href="add_new.php" class="btn btn-dark mb-3">Book Appointment </i></a>
+
+        <table class="table table-hover text-center">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">Child Name</th>
+      <th scope="col">Appointment Date</th>
+      <th scope="col">Hospital</th>
+      <th scope="col">Notes</th>
+      <th scope="col">Vaccination Status</th>
+      <th scope="col">Created At</th>
+      <th scope="col">Updated At</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+      <tr>
+        <td>Jhon Doe</td>
+        <td>2024/02/20</td>
+        <td>Atia Hospital</td>
+        <td>no requirement</td>
+        <td>Pending</td>
+        <td>11 PM</td>
+        <td>11 PM</td>
+        
+      <td>
+        <a href="edit.php" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i></a>
+        <a href="delete.php" class="link-dark"><i class="fa-solid fa-trash fs-5 hover-red"></i></a>
+      </td>
+    </tr>
+
+
+  </tbody>
+</table>
+    </div>
+
+    <!-- <div class="container">
+        <div class="text-center mb-4">
+            <h3>Add New User</h3>
+            <p class="text-muted">Complete the form below to add a new user</p>
+        </div>
+
+        <div class="container d-flex justify-content-center">
+            <form action="" method="post" style="width:50vw; min-width:300px;">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label">First Name:</label>
+                        <input type="text" class="form-control" name="first_name" placeholder="Enter your first name" required>
+                    </div>
+
+                    <div class="col">
+                        <label class="form-label">Last Name:</label>
+                        <input type="text" class="form-control" name="last_name" placeholder="Enter your last name"
+                        required>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                    <label class="form-label">Email:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Enter your email"
+                    required>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label >Gender:</label>&nbsp;
+                        <input type="radio" class="form-check-input" name="gender" id="male" value="male" required>
+                        <label for="male" class="form-input-label">Male</label>
+                        &nbsp;
+                        <input type="radio" class="form-check-input" name="gender" id="female" value="female" required>
+                        <label for="female" class="form-input-label">Female</label>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-success" name="submit">Save</button>
+                        <a href="" class="btn btn-danger">Cancel</a>
+                    </div>  
+                </div>
+            </form>
+        </div>
+    </div> -->
+
+
 
 
 @endsection
