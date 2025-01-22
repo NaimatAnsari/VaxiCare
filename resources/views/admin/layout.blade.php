@@ -159,13 +159,19 @@
 							</ul>
 						</li>
                         <li>
-                            <a href="appointments.html"><i class='bx bxs-user-detail'></i> <span>Parent Request</span></a>
+                            <a href="appointments.html"><i class='bx bxs-user-detail'></i> <span>Appointment Request</span></a>
                         </li>
                         <li>
                             <a href="hospital"><i class='fa fa-hospital-o'></i> <span> Hospital Management</span></a>
                         </li>
                         <li>
                             <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Reports</span></a>
+                        </li>
+                        <li>
+                            <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Feedback</span></a>
+                        </li>
+                        <li>
+                            <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Contact</span></a>
                         </li>
 						{{--<li class="submenu">
 							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>

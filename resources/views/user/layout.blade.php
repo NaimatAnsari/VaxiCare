@@ -93,7 +93,7 @@
                         <a href="vaccines" class="nav-item nav-link">Vaccines</a>
                         <a href="contact" class="nav-item nav-link">Feedback</a>
                         <a href="contact" class="nav-item nav-link">Contact</a> 
-                        <a href="contact" class="nav-item nav-link">Children</a>
+                        <a href="{{route('children.index')}}" class="nav-item nav-link">Children</a>
                         <a href="contact" class="nav-item nav-link">Appointment</a> 
                         <div class="nav-item dropdown">
                             <a 

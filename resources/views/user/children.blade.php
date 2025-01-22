@@ -27,7 +27,7 @@
 </div>';
       }
       ?> --}}
-        <a href="add_new.php" class="btn btn-dark mb-3">Add New Children </i></a>
+        <a href="{{route('children.create')}}" class="btn btn-dark mb-3">Add New Children </i></a>
 
         <table class="table table-hover text-center">
   <thead class="table-dark">
@@ -43,23 +43,33 @@
     </tr>
   </thead>
   <tbody>
+    @foreach ($childrens as $children)
+      
+    <tr>
+      <td>{{$children->parent_id}}</td>
+      <td>{{$children->name}}</td>
+      <td>{{$children->date_of_birth}}</td>
+      <td>{{$children->gender}}</td>
+      <td><b>{{$children->vaccination_status}}</b></td>
+      <td>{{$children->created_at}}</td>
+      <td>{{$children->updated_at}}</td>
+      
+    <td>
+      <a href="{{ route('children.edit', $children->id)}}" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i></a>
+      <form action="{{ route('children.destroy', $children->id) }}" method="POST" style="display:inline;">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="link-dark border-0 bg-transparent">
+            <i class="fa-solid fa-trash fs-5 hover-red"></i>
+        </button>
+    </form></td>
+  </tr>
 
-      <tr>
-        <td>1</td>
-        <td>Jhon Doe</td>
-        <td>2024/02/20</td>
-        <td>Male</td>
-        <td>Vaccinated</td>
-        <td>11 PM</td>
-        <td>11 PM</td>
+
+
+    @endforeach
+
         
-      <td>
-        <a href="edit.php" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i></a>
-        <a href="delete.php" class="link-dark"><i class="fa-solid fa-trash fs-5 hover-red"></i></a>
-      </td>
-    </tr>
-
-
   </tbody>
 </table>
     </div>

@@ -3,8 +3,25 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ChildrenController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Routing\Route as RoutingRoute;
+
+
+
+
+// Resouce Controller 
+
+Route::resource('users', UsersController::class);
+Route::resource('children', ChildrenController::class);
+
+
+
+
+
+
+
+
 
 Route::get('/',[UserController::class,'home']);
 
@@ -31,10 +48,10 @@ Route::get('feedback',[UserController::class,'feedback']);
 
 
 
-Route::resource('users', UsersController::class);
 
 
-Route::get('login',[UserController::class,'login']);
+
+// Route::get('login',[UserController::class,'login']);
 
 Route::get('forgetPassword',[UserController::class,'forgetPassword']);
 
