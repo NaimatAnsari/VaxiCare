@@ -13,7 +13,7 @@
             <div class="col-lg-4">
                 <div class="bg-light rounded d-flex flex-column align-items-center justify-content-center text-center" style="height: 200px;">
                     <div class="d-flex align-items-center justify-content-center bg-primary rounded-circle mb-4" style="width: 100px; height: 70px; transform: rotate(-15deg);">
-                        <i class="fa fa-2x fa-hospital-o text-white" style="transform: rotate(15deg);"></i>
+                        <i class="fas fa-2x fa-hospital text-white" style="transform: rotate(15deg);"></i>
                     </div>
                     <h6 class="mb-0">Vaccination Center</h6>
                     <p>123 Health St., New York, USA</p>
@@ -39,7 +39,8 @@
         <div class="row justify-content-center position-relative" style=" z-index: 1;">
             <div class="col-lg-8">
                 <div class="bg-white rounded p-5 m-5 mb-0 shadow-lg">
-                    <form method="POST" action="">
+                    <form method="POST" action="{{ route('feedback.store')}}">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
                                 <input type="text" class="form-control bg-light border-0" name="name" placeholder="Your Name" style="height: 55px;" required>
@@ -69,5 +70,16 @@
     </div>
 </div>
 <!-- Contact End -->
+
+@if(session('success'))
+<script>
+    Swal.fire({
+        title: 'Success',
+        text: "{{ session('success') }}",
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+</script>
+@endif
 
 @endsection

@@ -5,6 +5,9 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ChildrenController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FeedbackController;
+use App\Http\Controllers\ContactController;
+use App\Models\Contact;
 use Illuminate\Routing\Route as RoutingRoute;
 
 
@@ -14,6 +17,9 @@ use Illuminate\Routing\Route as RoutingRoute;
 
 Route::resource('users', UsersController::class);
 Route::resource('children', ChildrenController::class);
+Route::resource('feedback', FeedbackController::class);
+Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
+Route::resource('contact', ContactController::class);
 
 
 
@@ -33,7 +39,7 @@ Route::get('service',[UserController::class,'service']);
 
 Route::get('vaccines',[UserController::class,'vaccines']);
 
-Route::get('contact',[UserController::class,'contact']);
+
 
 Route::get('child',[UserController::class,'dashboard']);
 
@@ -44,7 +50,6 @@ Route::get('appointment',[UserController::class,'appoint']);
 Route::get('bookappoint',[UserController::class,'bookappoint']);
 
 
-Route::get('feedback',[UserController::class,'feedback']);
 
 
 

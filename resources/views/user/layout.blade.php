@@ -35,6 +35,8 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('user/css/style.css') }}" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 </head>
 
@@ -91,8 +93,8 @@
                         <a href="about" class="nav-item nav-link">About</a>
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="vaccines" class="nav-item nav-link">Vaccines</a>
-                        <a href="contact" class="nav-item nav-link">Feedback</a>
-                        <a href="contact" class="nav-item nav-link">Contact</a> 
+                        <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
+                        <a href="{{route('contact.create')}}" class="nav-item nav-link">Contact</a> 
                         <a href="{{route('children.index')}}" class="nav-item nav-link">Children</a>
                         <a href="contact" class="nav-item nav-link">Appointment</a> 
                         <div class="nav-item dropdown">
@@ -203,6 +205,7 @@
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <script src="{{ asset('user/lib/easing/easing.min.js') }} "></script>
 <script src="{{ asset('user/lib/waypoints/waypoints.min.js') }} "></script>

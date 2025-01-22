@@ -168,10 +168,10 @@
                             <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Reports</span></a>
                         </li>
                         <li>
-                            <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Feedback</span></a>
+                            <a href="/feedback"><i class="fas fa-comment-dots"></i> <span>Feedback</span></a>
                         </li>
                         <li>
-                            <a href="departments.html"><i class="fa fa-flag-o"></i> <span>Contact</span></a>
+                            <a href="{{ route('contact.index')}}"><i class="fas fa-envelope"></i> <span>Contact</span></a>
                         </li>
 						{{--<li class="submenu">
 							<a href="#"><i class="fa fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>

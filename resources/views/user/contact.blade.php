@@ -49,19 +49,20 @@
             <div class="row justify-content-center position-relative" style="margin-top: -200px; z-index: 1;">
                 <div class="col-lg-8">
                     <div class="bg-white rounded p-5 m-5 mb-0">
-                        <form>
+                        <form action="{{ route('contact.store')}}" method="POST">
+                            @csrf
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0" name="name" placeholder="Your Name" style="height: 55px;" pattern="[A-Za-z\s]+" title="Please enter a Valid Name" required >
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control bg-light border-0" name="email" placeholder="Your Email" style="height: 55px;" required >
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Subject" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0" name="subject" placeholder="Subject" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="5" placeholder="Message"></textarea>
+                                    <textarea class="form-control bg-light border-0" name="subject" rows="5" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
@@ -74,6 +75,18 @@
         </div>
     </div>
     <!-- Contact End -->
+
+    
+@if(session('success'))
+<script>
+    Swal.fire({
+        title: 'Success',
+        text: "{{ session('success') }}",
+        icon: 'success',
+        confirmButtonText: 'OK'
+    });
+</script>
+@endif
 
 
 @endsection
