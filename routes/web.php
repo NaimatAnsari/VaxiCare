@@ -6,9 +6,7 @@ use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ChildrenController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FeedbackController;
-use App\Http\Controllers\ContactController;
-use App\Models\Contact;
-use Illuminate\Routing\Route as RoutingRoute;
+use App\Http\Controllers\UserContactController;
 
 
 
@@ -19,7 +17,7 @@ Route::resource('users', UsersController::class);
 Route::resource('children', ChildrenController::class);
 Route::resource('feedback', FeedbackController::class);
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
-Route::resource('contact', ContactController::class);
+Route::resource('usercontact', UserContactController::class);
 
 
 

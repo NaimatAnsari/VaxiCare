@@ -94,7 +94,7 @@
                         <a href="service" class="nav-item nav-link">Service</a>
                         <a href="vaccines" class="nav-item nav-link">Vaccines</a>
                         <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
-                        <a href="{{route('contact.create')}}" class="nav-item nav-link">Contact</a> 
+                        <a href="{{route('usercontact.create')}}" class="nav-item nav-link">Contact</a> 
                         <a href="{{route('children.index')}}" class="nav-item nav-link">Children</a>
                         <a href="contact" class="nav-item nav-link">Appointment</a> 
                         <div class="nav-item dropdown">
