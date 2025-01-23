@@ -48,7 +48,8 @@ class UsersController extends Controller
             'picture' => $picturePath, // Include picture path here
         ]);
 
-        return redirect()->route('user.login')->with('success', 'User registered successfully.');
+        session()->flash('success', 'User registered successfully.');
+        return view('user.login');
     }
     /**
      * Display the specified resource.

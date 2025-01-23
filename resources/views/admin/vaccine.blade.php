@@ -6,22 +6,17 @@
 <div class="content">
     <div class="row">
         <div class="col-sm-4 col-3">
-            <h4 class="page-title">Children Detials</h4>
+            <h4 class="page-title">Vaccination Detials</h4>
         </div>
         <div class="col-sm-8 col-9 text-right m-b-20">
-            <a href="addChildren" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Add Children</a>
+            <a href="{{ route('vaccine.create')}}" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Add Vaccines</a>
         </div>
     </div>
     <div class="row filter-row">
-        <div class="col-sm-6 col-md-3">
-            <div class="form-group form-focus">
-                <label class="focus-label">Children ID</label>
-                <input type="text" class="form-control floating">
-            </div>
         </div>
         <div class="col-sm-6 col-md-3">
             <div class="form-group form-focus">
-                <label class="focus-label">Children Name</label>
+                <label class="focus-label">Vaccine Name</label>
                 <input type="text" class="form-control floating">
             </div>
         </div>
@@ -37,10 +32,10 @@
                     <option>Receptionist</option>
                 </select>
             </div>
-        </div> --}}
+        </div> 
         <div class="col-sm-6 col-md-3">
             <a href="#" class="btn btn-success btn-block"> Search </a>
-        </div>
+        </div>--}}
     </div>
     <div class="row">
         <div class="col-md-12">
@@ -48,27 +43,35 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
-                            <th>Parent ID</th>
-                            <th>Name</th>
-                            <th>Date Of Birth</th>
-                            <th>Gender</th>
-                            <th>Vaccination Status</th>
+                            <th>ID</th>
+                            <th>Vaccine Name</th>
+                            <th>Description</th>
+                            <th>Availability Status</th>
+                            <th>Image</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                             <th class="text-right">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($childrens as $children)
+                        @foreach ($vaccines as $vaccine)
       
     <tr>
-      <td>{{$children->parent_id}}</td>
-      <td>{{$children->name}}</td>
-      <td>{{$children->date_of_birth}}</td>
-      <td>{{$children->gender}}</td>
-      <td><b>{{$children->vaccination_status}}</b></td>
-      <td>{{$children->created_at}}</td>
-      <td>{{$children->updated_at}}</td>
+      <td>{{$vaccine->id}}</td>
+      <td>{{$vaccine->vaccine_name}}</td>
+      <td>{{$vaccine->description}}</td>
+      <td><b>{{$vaccine->availability_status}}</b></td>
+      <td>
+        <img 
+            width="100" 
+            height="100" 
+            src="{{ asset('storage/' . $vaccine->image) }}" 
+            class="rounded-circle m-r-5" 
+            alt="{{ $vaccine->vaccine_name }}" 
+            style="object-fit: cover; width: 100px; height: 100px; border-radius: 10px;">
+    </td>
+      <td>{{$vaccine->created_at}}</td>
+      <td>{{$vaccine->updated_at}}</td>
       
       <td class="text-right">
         <div class="dropdown dropdown-action">

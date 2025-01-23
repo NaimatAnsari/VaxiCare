@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\User;
+use App\Models\Children;
 class AdminController extends Controller
 {
     public function home(){
@@ -12,7 +13,9 @@ class AdminController extends Controller
     }
 
     public function childrenDetail(){
-        return view('admin.childrenDetail');   
+        
+        $childrens = Children::all();
+        return view('admin.childrenDetail',compact('childrens')); 
     }
 
     public function addChildren(){

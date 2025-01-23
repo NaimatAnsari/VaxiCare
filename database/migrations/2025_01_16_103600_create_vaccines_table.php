@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('vaccine_name', 100);
             $table->text('description')->nullable();
             $table->enum('availability_status', ['Available', 'Unavailable'])->default('Available');
+            $table->string('image')->nullable(); 
             $table->timestamps();
         });
     }

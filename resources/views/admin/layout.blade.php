@@ -153,7 +153,7 @@
                         <li class="submenu">
 							<a href="#"><i class="bx bx-injection"></i> <span>Vaccines</span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
-								<li><a href="vaccinationShedule">Vaccination Schedule</a></li>
+								<li><a href="{{ route('vaccine.index')}}">Vaccine Management</a></li>
 								<li><a href="leaves.html">Vaccination Reports</a></li>
 								<li><a href="holidays.html">Vaccine Inventory</a></li>
 							</ul>

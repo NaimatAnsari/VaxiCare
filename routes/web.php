@@ -7,9 +7,7 @@ use App\Http\Controllers\ChildrenController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserContactController;
-
-
-
+use App\Http\Controllers\VaccineController;
 
 // Resouce Controller 
 
@@ -18,6 +16,7 @@ Route::resource('children', ChildrenController::class);
 Route::resource('feedback', FeedbackController::class);
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
 Route::resource('usercontact', UserContactController::class);
+Route::resource('vaccine', VaccineController::class);
 
 
 
