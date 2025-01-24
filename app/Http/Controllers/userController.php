@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Vaccine;
 class UserController extends Controller
 {
     public function home()
@@ -23,7 +23,8 @@ class UserController extends Controller
 
     public function vaccines()
     {
-        return view('user.vaccines');
+        $vaccines = Vaccine::all();
+        return view('user.vaccines' , compact('vaccines'));
     }
 
     public function contact()
