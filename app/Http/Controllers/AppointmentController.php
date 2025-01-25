@@ -11,7 +11,9 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        //
+        
+        $bookAppoint = Appointment::all();
+        return view('admin.appointment',compact('bookAppoint'));
     }
 
     /**

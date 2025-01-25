@@ -59,16 +59,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($childrens as $children)
+                        @foreach ($bookAppoint as $bookApp)
       
     <tr>
-      <td>{{$children->parent_id}}</td>
-      <td>{{$children->name}}</td>
-      <td>{{$children->date_of_birth}}</td>
-      <td>{{$children->gender}}</td>
-      <td><b>{{$children->vaccination_status}}</b></td>
-      <td>{{$children->created_at}}</td>
-      <td>{{$children->updated_at}}</td>
+      <td>{{$bookApp->}}</td>
+      <td>{{$bookApp->name}}</td>
+      <td>{{$bookApp->date_of_birth}}</td>
+      <td>{{$bookApp->gender}}</td>
+      <td><b>{{$bookApp->vaccination_status}}</b></td>
+      <td>{{$bookApp->created_at}}</td>
+      <td>{{$bookApp->updated_at}}</td>
       
       <td class="text-right">
         <div class="dropdown dropdown-action">

@@ -159,7 +159,7 @@
 							</ul>
 						</li>
                         <li>
-                            <a href="appointments.html"><i class='bx bxs-user-detail'></i> <span>Appointment Request</span></a>
+                            <a href="/bookAppoint"><i class='bx bxs-user-detail'></i> <span>Appointment Request</span></a>
                         </li>
                         <li>
                             <a href="hospital"><i class='fa fa-hospital-o'></i> <span> Hospital Management</span></a>

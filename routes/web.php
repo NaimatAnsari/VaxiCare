@@ -46,10 +46,10 @@ Route::get('/profile',[UserController::class,'profile']);
 Route::get('child',[UserController::class,'dashboard']);
 
 
-Route::get('/appointment',[UserController::class,'appoint']);
+Route::get('/bookAppoint',[AdminController::class,'bookAppoint']);
 
 
-Route::get('bookappoint',[UserController::class,'bookappoint']);
+// Route::get('bookappoint',[UserController::class,'bookappoint']);
 
 
 

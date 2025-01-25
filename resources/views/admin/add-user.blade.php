@@ -10,18 +10,20 @@
     </div>
     <div class="row">
         <div class="col-lg-8 offset-lg-2">
-            <form >
+            <form method="POST" action="{{route('users.store')}}" enctype="multipart/form-data">
+                @csrf
+            
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input class="form-control" type="text" placeholder="Enter Full Name">
+                            <input class="form-control" type="text" name="fullname" placeholder="Enter Full Name">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Address</label>
-                            <input class="form-control" type="text" placeholder="Enter Address">
+                            <input class="form-control" type="text" name="address" placeholder="Enter Address">
                         </div>
                     </div>
                 </div>
@@ -29,16 +31,18 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Role</label>
-                            <select class="select">
-                                <option>User</option>
-                                <option>Hospital</option>
+                            <select class="select" name="role">
+                                <option value="" disabled selected>Select Role</option>
+                                    <option value="parent">Parent</option>
+                                    <option value="hospital">Hospital</option>
+                                    <option value="admin">Admin</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Email</label>
-                            <input class="form-control" type="email" placeholder="Enter Email">
+                            <input class="form-control" type="email" name="email" placeholder="Enter Email">
                         </div>
                     </div>
                 </div>
@@ -46,7 +50,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Password</label>
-                            <input class="form-control" type="password" placeholder="Enter Password">
+                            <input class="form-control" type="password" name="password" placeholder="Enter Password">
                         </div>
                     </div>
                     <div class="col-md-6">

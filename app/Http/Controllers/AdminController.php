@@ -26,6 +26,10 @@ class AdminController extends Controller
         return view('admin.edit-childrenDetail');   
     }
 
+    public function bookAppoint(){
+        return view('admin.appointment');   
+    }
+
     // public function userDetail()
     // {
     //     $users = User::all();
