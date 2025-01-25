@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Vaccine;
 class UserController extends Controller
-{
+    {
     public function home()
     {
         return view('user.home');
@@ -27,19 +27,15 @@ class UserController extends Controller
         return view('user.vaccines' , compact('vaccines'));
     }
 
-    public function contact()
-    {
-        return view('user.contact');
+    public function profile()
+    {   
+        $users = User::all();
+        return view('user.profile', compact('users'));
     }
 
-    public function register()
+    public function appoint()
     {
-        return view('user.register');
-    }
-
-    public function login()
-    {
-        return view('user.login');
+        return view('user.appointment');
     }
 
     public function forgetPassword()
@@ -51,24 +47,4 @@ class UserController extends Controller
     {
         return view('user.resetPassword');
     }
-
-    public function dashboard()
-    {
-        return view('user.childern');
     }
-
-    public function appoint()
-    {
-        return view('user.appointment');
-    }
-
-    public function bookappoint()
-    {
-        return view('user.bookappiontment');
-    }
-
-    public function feedback()
-    {
-        return view('user.feedback');
-    }
-}

@@ -8,6 +8,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\VaccineController;
+use App\Http\Controllers\AppointmentController;
+
 
 // Resouce Controller 
 
@@ -17,6 +19,7 @@ Route::resource('feedback', FeedbackController::class);
 Route::get('/feedback', [FeedbackController::class, 'index'])->name('feedback.index');
 Route::resource('usercontact', UserContactController::class);
 Route::resource('vaccine', VaccineController::class);
+Route::resource('appointment', AppointmentController::class);
 
 
 
@@ -28,20 +31,22 @@ Route::resource('vaccine', VaccineController::class);
 
 Route::get('/',[UserController::class,'home']);
 
-Route::get('home',[UserController::class,'home']);
+Route::get('/home',[UserController::class,'home']);
 
-Route::get('about',[UserController::class,'about']);
+Route::get('/about',[UserController::class,'about']);
 
-Route::get('service',[UserController::class,'service']);
+Route::get('/service',[UserController::class,'service']);
 
-Route::get('vaccines',[UserController::class,'vaccines']);
+Route::get('/vaccines',[UserController::class,'vaccines']);
+
+Route::get('/profile',[UserController::class,'profile']);
 
 
 
 Route::get('child',[UserController::class,'dashboard']);
 
 
-Route::get('appointment',[UserController::class,'appoint']);
+Route::get('/appointment',[UserController::class,'appoint']);
 
 
 Route::get('bookappoint',[UserController::class,'bookappoint']);

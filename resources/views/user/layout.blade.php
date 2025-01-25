@@ -89,14 +89,14 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 align-items-center">
-                        <a href="home" class="nav-item nav-link">Home</a>
-                        <a href="about" class="nav-item nav-link">About</a>
-                        <a href="service" class="nav-item nav-link">Service</a>
-                        <a href="vaccines" class="nav-item nav-link">Vaccines</a>
+                        <a href="/home" class="nav-item nav-link">Home</a>
+                        <a href="/about" class="nav-item nav-link">About</a>
+                        <a href="/service" class="nav-item nav-link">Service</a>
+                        <a href="/vaccines" class="nav-item nav-link">Vaccines</a>
                         <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
                         <a href="{{route('usercontact.create')}}" class="nav-item nav-link">Contact</a> 
                         <a href="{{route('children.index')}}" class="nav-item nav-link">Children</a>
-                        <a href="contact" class="nav-item nav-link">Appointment</a> 
+                        <a href="/appointment " class="nav-item nav-link">Appointment</a> 
                         <div class="nav-item dropdown">
                             <a 
                                 href="#" 
@@ -113,7 +113,7 @@
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                <li><a class="dropdown-item" href="register">Profile</a></li>
+                                <li><a class="dropdown-item" href="/profile">Profile</a></li>
                                 <li><a class="dropdown-item" href="{{ route('users.create') }}">Register</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="login">Login</a></li>

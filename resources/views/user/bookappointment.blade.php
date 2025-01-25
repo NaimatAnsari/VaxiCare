@@ -37,27 +37,30 @@
                 <div class="row g-3">        
                             <div class="col-12">
                                 <label for="child_name" class="form-label fw-bold">Select Child Name</label>
-                                <select name="child_name" id="child_name" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                                <select name="child_id" id="child_name" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                                     <option value="" disabled selected>Select Child Name</option>
                                     <option value="Child 1">Child 1</option>
                                     <option value="Child 2">Child 2</option>
                                     <option value="Child 3">Child 3</option>
                                 </select>
                             </div>
-                            <div class="col-12">
-                                <label for="appointment_datetime" class="form-label fw-bold">Appointment Date & Time</label>
-                                <input type="datetime-local" name="appointment_datetime" id="appointment_datetime" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
-                            </div>
                             
                             <div class="col-12">
                                 <label for="hospital" class="form-label fw-bold">Select Hospital</label>
-                                <select name="hospital" id="hospital" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                                <select name="hospital_id" id="hospital" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                                     <option value="" disabled selected>Select Hospital</option>
                                     <option value="Hospital 1">Hospital 1</option>
                                     <option value="Hospital 2">Hospital 2</option>
                                     <option value="Hospital 3">Hospital 3</option>
                                 </select>
                             </div>
+                            
+                            
+                            <div class="col-12">
+                                <label for="appointment_datetime" class="form-label fw-bold">Appointment Date & Time</label>
+                                <input type="datetime-local" name="vaccination_date" id="appointment_datetime" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                            </div>
+                            
                             
                             <div class="col-12">
                                 <label for="child_name" class="form-label fw-bold">Vaccine Type</label>
