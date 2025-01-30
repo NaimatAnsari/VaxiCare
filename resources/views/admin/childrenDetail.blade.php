@@ -59,10 +59,11 @@
                         </tr>
                     </thead>
                     <tbody>
+                        
                         @foreach ($childrens as $children)
       
     <tr>
-      <td>{{$children->parent_id}}</td>
+      <td>{{$loop->iteration }}</td>
       <td>{{$children->name}}</td>
       <td>{{$children->date_of_birth}}</td>
       <td>{{$children->gender}}</td>
@@ -81,7 +82,6 @@
     </td>
 </tr>
 
-        
                         @endforeach
                         
                        

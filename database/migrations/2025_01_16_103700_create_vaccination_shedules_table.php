@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('vaccination_schedule', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('child_id')->constrained('children')->onDelete('cascade');
-            $table->foreignId('vaccine_id')->constrained('vaccines')->onDelete('cascade');
+            $table->integer('child_id');
+            $table->integer('vaccine_id');
             $table->date('vaccination_date');
             $table->enum('status', ['Pending', 'Completed'])->default('Pending');
             $table->timestamps();

@@ -16,16 +16,17 @@ class UserController extends Controller
         return view('user.about');
     }
 
-    public function service()
-    {
-        return view('user.service');
-    }
-
     public function vaccines()
     {
         $vaccines = Vaccine::all();
         return view('user.vaccines' , compact('vaccines'));
     }
+
+    public function app()
+    {
+        return view('admin.bookAppointment');
+    }
+
 
     public function profile()
     {   
@@ -35,7 +36,7 @@ class UserController extends Controller
 
     public function appoint()
     {
-        return view('user.appointment');
+        return view('user.Appointment');
     }
 
     public function forgetPassword()

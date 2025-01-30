@@ -45,6 +45,7 @@ class UsersController extends Controller
             'password' => $request->password, // Password will be hashed in the model
             'address' => $request->address,
             'role' => $request->role,
+            'phone_number'=> $request->phone_number,
             'picture' => $picturePath, // Include picture path here
         ]);
 
@@ -72,39 +73,30 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        // Validate the incoming request to ensure the picture is a valid file
-        $request->validate([
-            'picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
 
-        // Check if a new picture is uploaded
-        $picturePath = null;
-        if ($request->hasFile('picture') && $request->file('picture')->isValid()) {
-            // Delete the old picture from storage (if exists)
+
+        $user = User::find($user->id);
+
+        if ($request->file('picture')) {
+            // Delete old picture if exists
             if ($user->picture) {
-                Storage::disk('public')->delete($user->picture);
+                Storage::disk('public')->delete($user->picture);  // Delete old picture from storage
             }
-
-            // Store the new picture and get the path
-            $picturePath = $request->file('picture')->store('pictures', 'public');
-
-            // Update the picture path in the request
-            $request->merge(['picture' => $picturePath]);
+        
+            // Store new picture
+            $picturePath = $request->file('picture')->store('picture', 'public');
+            $user->picture = $picturePath;
         }
 
-
-        // Update other user data (including picture if uploaded)
-        //    $user->update($request->all());
-
-        $user->update([
-            'fullname' => $request->fullname,
-            'email' => $request->email,
-            'password' => $request->password, // Password will be hashed in the model
-            'address' => $request->address,
-            'role' => $request->role,
-            'picture' => $picturePath, // Include picture path here
-        ]);
-
+        $user->fullname =  $request->fullname;
+        $user->fullname = $request->fullname;
+            $user->email = $request->email;
+            $user->password =  bcrypt($request->password); // Password will be hashed in the model
+            $user->address = $request->address;
+            $user->role = $request->role;
+            $user->phone_number= $request->phone_number;
+            $user->save();
+                        
         // Redirect or return the updated view
         return redirect()->route('users.index');
     }

@@ -40,25 +40,26 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <label for="picture" class="form-label fw-bold fs-5">Picture</label>
+                        <label>Vaccine Image</label>
                         <div class="upload-container" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
                             <!-- Upload Box -->
                             <div class="upload-box" 
-                                 style="border: 2px dashed #ccc; padding: 20px; text-align: center; background-color: #f9f9f9; cursor: pointer; width: 150px; height: 150px; position: relative;">
+                                 style="border: 2px dashed #ccc; padding: 20px; text-align: center; background-color: #f9f9f9; cursor: pointer; width: 150px; height: 150px; position: relative; overflow: hidden;">
                                 <span class="upload-text" 
                                       style="font-size: 18px; color: #007bff; font-weight: bold; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">+ Upload</span>
                                 <input type="file" name="image" id="picture" 
                                        class="form-control" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;" 
                                        accept=".jpg,.jpeg,.png" required onchange="previewImage(event)">
                             </div>
-                            <!-- New Box to Show the Selected Image -->
+                        
+                            <!-- Box to Show the Selected Image -->
                             <div id="image-box" 
-                                 style="border: 4px dashed silver; text-align: center; background-color: #f9f9f9; display: none; width: auto; height: auto;">
+                                 style="border: 4px dashed silver; text-align: center; background-color: #f9f9f9; display: none; width: 150px; height: 150px; overflow: hidden; position: relative;">
                                 <img id="preview" src="" alt="Preview" 
-                                     style="width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto;">
+                                     style="width: 100%; height: 100%; object-fit: cover; display: block; margin: 0 auto;">
                             </div>
                         </div>
-                    </div>
+                         
                 </div>
                 
                 <div class="m-t-20 py-5 text-center">

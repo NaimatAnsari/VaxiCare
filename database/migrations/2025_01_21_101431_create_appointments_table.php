@@ -16,11 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('child_id');
             $table->unsignedBigInteger('hospital_id');
             $table->date('vaccination_date');
+            $table->time('vaccination_time');
+            $table->string('vaccine_type'); // Vaccine type column added
+            $table->text('comment')->nullable(); // Comment column added
             $table->enum('status', ['Pending', 'Approved', 'Rejected'])->default('Pending');
             $table->timestamps();
-
-            $table->foreign('child_id')->references('id')->on('children')->onDelete('cascade');
-            $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade');
         });
     }
 

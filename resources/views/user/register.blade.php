@@ -60,6 +60,11 @@
                                     <option value="admin">Admin</option>
                                 </select>
                             </div>
+                            <div class="col-12">
+                                <div class="input-group shadow-sm">
+                                    <input type="tel" name="phone_number" class="form-control bg-light border-0 shadow-none" placeholder="Phone Number" style="height: 50px;" required>
+                                </div>
+                            </div>
                             
                             <div class="col-12">
                                 <input type="email" name="email" class="form-control bg-light border-0 shadow-none" placeholder="Email Address" style="height: 55px;" required>

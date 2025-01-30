@@ -42,7 +42,7 @@ class VaccineController extends Controller
             'image' => $picturePath,
         ]);
 
-        return view('admin.vaccine');
+        return redirect()->route('vaccine.index');
 
     }
 

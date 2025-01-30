@@ -32,7 +32,7 @@
                         <p>Fill in the details below to schedule an appointment for your child's vaccination.</p>
                     </div>
                     
-                    <form method="POST" action="">
+                    <form method="POST" action="{{route('appointment.store')}}">
                         @csrf
                 <div class="row g-3">        
                             <div class="col-12">
@@ -44,7 +44,9 @@
                                     <option value="Child 3">Child 3</option>
                                 </select>
                             </div>
-                            
+                           {{-- child_name<input type="number" name="child_id">
+                            hospital_id<input type="number" name="hospital_id"> --}}
+
                             <div class="col-12">
                                 <label for="hospital" class="form-label fw-bold">Select Hospital</label>
                                 <select name="hospital_id" id="hospital" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
@@ -57,25 +59,30 @@
                             
                             
                             <div class="col-12">
-                                <label for="appointment_datetime" class="form-label fw-bold">Appointment Date & Time</label>
-                                <input type="datetime-local" name="vaccination_date" id="appointment_datetime" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                                <label for="appointment_date" class="form-label fw-bold">Appointment Date </label>
+                                <input type="date" name="vaccination_date" id="appointment_date" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                             </div>
                             
                             
                             <div class="col-12">
-                                <label for="child_name" class="form-label fw-bold">Vaccine Type</label>
-                                <select name="child_name" id="child_name" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                                <label for="appointment_time" class="form-label fw-bold">Appointment Time</label>
+                                <input type="time" name="vaccination_time" id="appointment_time" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="vaccine_type" class="form-label fw-bold">Vaccine Type</label>
+                                <select name="vaccine_type" id="child_name" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                                     <option value="" disabled selected>Select Vaccine Type</option>
-                                    <option value="Child 1">Child 1</option>
-                                    <option value="Child 2">Child 2</option>
-                                    <option value="Child 3">Child 3</option>
+                                    <option value="Vaccine 1">Vaccine 1</option>
+                                    <option value="Vaccine 2">Vaccine 2</option>
+                                    <option value="Vaccine 3">Vaccine 3</option>
                                 </select>
                             </div>
                 
                             <div class="col-12">
                                 <label for="notes" class="form-label fw-bold">Additional Comments (Optional)</label>
-                                <textarea name="notes" id="notes" class="form-control bg-light border-0 shadow-none" placeholder="Comments Here" rows="5" style="resize: none;"></textarea>
-                            </div>
+                                <input type="text" name="comment" id="notes" class="form-control bg-light border-0 shadow-none" placeholder="Comments Here">
+                                </div>
                             
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Book Appointment</button>
@@ -83,7 +90,7 @@
                         </div>
                     </form>
                     <div class="col-12 text-center mt-4">
-                        <p>Need assistance? <a href="contact" class="text-primary">Contact us</a></p>
+                        <p>Need assistance? <a href="{{route('usercontact.create')}}" class="text-primary">Contact us</a></p>
                     </div>
                 </div>
             </div>
@@ -91,5 +98,14 @@
     </div>
 </div>
 <!-- Appointment End -->
+
+<script>
+    document.getElementById('appointment_date').addEventListener('change', function () {
+        var date = new Date(this.value);
+        var formattedDate = date.toISOString().split('T')[0]; // Converts to YYYY-MM-DD format
+        this.value = formattedDate;
+    });
+</script>
+
 
 @endsection

@@ -40,6 +40,13 @@
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
+                            <label>Phone Number</label>
+                            <input class="form-control" type="tel" name="phone_number" value="{{ $user->phone_number }}" placeholder="Enter Phone Number">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="form-group">
                             <label>Email</label>
                             <input class="form-control" type="email" name="email" value="{{ $user->email }}" placeholder="Enter Email">
                         </div>

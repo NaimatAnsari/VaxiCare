@@ -35,21 +35,20 @@ Route::get('/home',[UserController::class,'home']);
 
 Route::get('/about',[UserController::class,'about']);
 
-Route::get('/service',[UserController::class,'service']);
-
 Route::get('/vaccines',[UserController::class,'vaccines']);
 
 Route::get('/profile',[UserController::class,'profile']);
 
+Route::get('/app',[UserController::class,'app']);
 
 
-Route::get('child',[UserController::class,'dashboard']);
+// Route::get('appointment',[UserController::class,'appoint']);
 
 
 Route::get('/bookAppoint',[AdminController::class,'bookAppoint']);
 
 
-// Route::get('bookappoint',[UserController::class,'bookappoint']);
+Route::get('/profile',[UserController::class,'userProfile']);
 
 
 

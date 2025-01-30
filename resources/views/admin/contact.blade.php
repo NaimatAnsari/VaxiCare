@@ -24,10 +24,10 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        
                         @foreach ($contacts as $contact)
                         <tr>
-                            <td style="white-space: nowrap;">{{$contact->id}}</td>
+                            <td style="white-space: nowrap;">{{$loop->iteration }}</td>
                             <td style="white-space: nowrap;">{{$contact->name}}</td>
                             <td style="white-space: nowrap;">{{$contact->email}}</td>
                             <td style="white-space: nowrap;">{{$contact->subject}}</td>
@@ -35,7 +35,6 @@
                             
                         </tr>
                             
-
 
                         @endforeach
 

@@ -57,7 +57,7 @@
                                 </select>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control bg-light border-0" name="message" rows="5" placeholder="Your Message or Details" required></textarea>
+                                <textarea class="form-control bg-light border-0" name="message" rows="5" style="resize: none;" placeholder="Your Message or Details" required></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Submit Query</button>

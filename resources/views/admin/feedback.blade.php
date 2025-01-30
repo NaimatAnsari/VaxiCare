@@ -24,10 +24,9 @@
                         </tr>
                     </thead>
                     <tbody>
-
                         @foreach ($feedbacks as $feedback)
                         <tr>
-                            <td style="white-space: nowrap;">{{$feedback->id}}</td>
+                            <td style="white-space: nowrap;">{{$loop->iteration }}</td>
                             <td style="white-space: nowrap;">{{$feedback->name}}</td>
                             <td style="white-space: nowrap;">{{$feedback->email}}</td>
                             <td style="white-space: nowrap;">{{$feedback->query_type}}</td>
@@ -35,7 +34,6 @@
                             
                         </tr>
                             
-
 
                         @endforeach
 

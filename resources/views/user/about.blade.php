@@ -51,29 +51,91 @@
 <!-- About End -->
 
 
-<!-- Search Start -->
-<div class="container-fluid bg-primary my-5 py-5">
-    <div class="container py-5">
-        <div class="text-center mx-auto mb-5" style="max-width: 500px;">
-            <h5 class="d-inline-block text-white text-uppercase border-bottom border-5">Find A Doctor</h5>
-            <h1 class="display-4 mb-4">Find A Healthcare Professionals</h1>
-            <h5 class="text-white fw-normal">Duo ipsum erat stet dolor sea ut nonumy tempor. Tempor duo lorem eos sit sed ipsum takimata ipsum sit est. Ipsum ea voluptua ipsum sit justo</h5>
-        </div>
-        <div class="mx-auto" style="width: 100%; max-width: 600px;">
-            <div class="input-group">
-                <select class="form-select border-primary w-25" style="height: 60px;">
-                    <option selected>Department</option>
-                    <option value="1">Department 1</option>
-                    <option value="2">Department 2</option>
-                    <option value="3">Department 3</option>
-                </select>
-                <input type="text" class="form-control border-primary w-50" placeholder="Keyword">
-                <button class="btn btn-dark border-0 w-25">Search</button>
+
+    <!-- Services Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 500px;">
+                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Services</h5>
+                <h1 class="display-4">Excellent Vaccination Services</h1>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-user-md text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Appointment Scheduling</h4>
+                        <p class="m-0">Schedule your vaccination appointments at your convenience with flexible date and time options.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-procedures text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Vaccination Registration</h4>
+                        <p class="m-0">Easily register for vaccines online, ensuring a smooth and efficient process.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-stethoscope text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Vaccination Tracking</h4>
+                        <p class="m-0">Track your vaccination status and get timely reminders for booster doses.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-ambulance text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Free Transportation & Ambulance</h4>
+                        <p class="m-0">Enjoy free transportation and ambulance services for safe and timely vaccine administration.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-pills text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Emergency Vaccine Services</h4>
+                        <p class="m-0">Access emergency vaccine services during critical times for immediate protection.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                        <div class="service-icon mb-4">
+                            <i class="fa fa-2x fa-microscope text-white"></i>
+                        </div>
+                        <h4 class="mb-3">Vaccine Awareness & Information</h4>
+                        <p class="m-0">Get accurate and reliable information about vaccines, their benefits, and side effects.</p>
+                        <a class="btn btn-lg btn-primary rounded-pill" href="">
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Search End -->
+    <!-- Services End -->
 
 
 <!-- Team Start -->

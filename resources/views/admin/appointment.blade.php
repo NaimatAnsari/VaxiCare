@@ -50,7 +50,8 @@
                         <tr>
                             <th>Child Name</th>
                             <th>Hospital</th>
-                            <th>Appointment Date & Time</th>
+                            <th>Appointment Date</th>
+                            <th>Appointment Time</th>
                             <th>Vaccine Type</th>
                             <th>Additional Comments (Optional)</th>
                             <th>Created At</th>
@@ -59,17 +60,17 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($bookAppoint as $bookApp)
+                        
       
     <tr>
-      <td>{{$bookApp->}}</td>
-      <td>{{$bookApp->name}}</td>
-      <td>{{$bookApp->date_of_birth}}</td>
-      <td>{{$bookApp->gender}}</td>
-      <td><b>{{$bookApp->vaccination_status}}</b></td>
-      <td>{{$bookApp->created_at}}</td>
-      <td>{{$bookApp->updated_at}}</td>
-      
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       <td class="text-right">
         <div class="dropdown dropdown-action">
             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -82,7 +83,6 @@
 </tr>
 
         
-                        @endforeach
                         
                        
                     </tbody>

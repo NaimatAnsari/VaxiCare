@@ -9,11 +9,15 @@ class Appointment extends Model
 {
     use HasFactory;
 
+    protected $table = 'bookings'; // Correct Table Name
+
     protected $fillable = [
         'child_id',
         'hospital_id',
-        'date_of_birth',
-        'gender',
-        'vaccination_status'
-    ]; 
+        'vaccination_date',
+        'vaccination_time',
+        'vaccine_type',
+        'comment',
+        'status',
+        ]; 
 }

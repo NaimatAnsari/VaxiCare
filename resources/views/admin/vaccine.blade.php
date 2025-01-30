@@ -57,7 +57,7 @@
                         @foreach ($vaccines as $vaccine)
       
     <tr>
-      <td>{{$vaccine->id}}</td>
+      <td>{{$loop->iteration }}</td>
       <td>{{$vaccine->vaccine_name}}</td>
       <td>{{$vaccine->description}}</td>
       <td><b>{{$vaccine->availability_status}}</b></td>
@@ -110,7 +110,6 @@
         </div>
     </div>
 </div>
-        
                         @endforeach
                         
                        

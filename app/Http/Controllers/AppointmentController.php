@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AppointmentController extends Controller
 {
@@ -11,9 +12,13 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        
-        $bookAppoint = Appointment::all();
-        return view('admin.appointment',compact('bookAppoint'));
+        $users = DB::table('bookings')
+            ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
+            ->join('hospitals as h', 'bookings.hospital_id', '=', 'h.id')
+            ->select('bookings.*', 'c.name as child_name', 'h.name as hospital_name')
+            ->get();
+    
+        return view('user.Appointment', compact('users'));
     }
 
     /**
@@ -52,9 +57,9 @@ class AppointmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Appointment $bookAppoint)
     {
-        //
+        $bookAppoint->update($request->all());
     }
 
     /**
@@ -62,6 +67,6 @@ class AppointmentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Appointment::find($id)->delete();
     }
 }

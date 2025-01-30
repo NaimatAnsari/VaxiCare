@@ -37,6 +37,7 @@
                             <th>Full Name</th>
                             <th>Address</th>
                             <th>Role</th>
+                            <th>Phone</th>
                             <th>Email</th>
                             <th>Password</th>
                             <th>Picture</th>
@@ -46,13 +47,14 @@
                         </tr>
                     </thead>
                     <tbody>
-
+                        
                         @foreach ($users as $user)
                         <tr>
-                            <td style="white-space: nowrap;">{{$user->id}}</td>
+                            <td style="white-space: nowrap;">{{$loop->iteration }}</td>
                             <td style="white-space: nowrap;">{{$user->fullname}}</td>
                             <td style="white-space: nowrap;">{{$user->address}}</td>
                             <td style="white-space: nowrap;">{{$user->role}}</td>
+                            <td style="white-space: nowrap;">{{$user->phone_number}}</td>
                             <td style="white-space: nowrap;">{{$user->email}}</td>
                             <td style="white-space: nowrap;">{{$user->password}}</td>
                             <td>&nbsp; <img width="100" height="100" src="{{ asset('storage/' . $user->picture) }}" class="rounded-circle m-r-5" alt="{{$user->fullname}}"> </td>
@@ -95,7 +97,6 @@
         </div>
     </div>
 </div>
-
 
                         @endforeach
 

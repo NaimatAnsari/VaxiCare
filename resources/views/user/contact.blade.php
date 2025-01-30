@@ -62,7 +62,7 @@
                                     <input type="text" class="form-control bg-light border-0" name="subject" placeholder="Subject" style="height: 55px;" required>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" name="message" rows="5" placeholder="Message" required></textarea>
+                                    <textarea class="form-control bg-light border-0" name="message" rows="5" style="resize: none;" placeholder="Message" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
