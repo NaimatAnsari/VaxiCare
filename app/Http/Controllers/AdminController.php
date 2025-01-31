@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Children;
+use App\Models\Appointment;
+
 class AdminController extends Controller
 {
     public function home(){
@@ -26,10 +28,18 @@ class AdminController extends Controller
         return view('admin.edit-childrenDetail');   
     }
 
-    public function bookAppoint(){
-        return view('admin.appointment');   
+    public function bookAppoint() {
+        $bookings = DB::table('bookings')
+            ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
+            ->join('hospitals as h', 'bookings.hospital_id', '=', 'h.id')
+            ->select('bookings.*', 'c.name as child_name', 'h.name as hospital_name')
+            ->get();
+    
+        return view('admin.appointment', compact('bookings'));
     }
+    
 
+    
     // public function userDetail()
     // {
     //     $users = User::all();

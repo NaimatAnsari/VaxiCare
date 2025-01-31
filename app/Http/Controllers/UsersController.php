@@ -23,7 +23,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('user.register');
+        return view('admin.add-user');
     }
 
     /**
@@ -50,7 +50,7 @@ class UsersController extends Controller
         ]);
 
         session()->flash('success', 'User registered successfully.');
-        return view('user.login');
+        return redirect()->back();
     }
     /**
      * Display the specified resource.

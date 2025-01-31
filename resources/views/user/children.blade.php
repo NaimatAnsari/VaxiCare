@@ -23,8 +23,8 @@
         <table class="table table-hover text-center">
   <thead class="table-dark">
     <tr>
-      <th scope="col">Parent ID</th>
-      <th scope="col">Name</th>
+      <th scope="col">Parent Name</th>
+      <th scope="col">Child Name</th>
       <th scope="col">Date of Birth</th>
       <th scope="col">Gender</th>
       <th scope="col">Vaccination Status</th>

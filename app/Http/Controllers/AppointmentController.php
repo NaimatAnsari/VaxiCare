@@ -35,7 +35,7 @@ class AppointmentController extends Controller
     public function store(Request $request)
     {
         Appointment::create($request->all());
-        return view('user.Appointment');   
+        return redirect()->route('appointment.index');   
     }
 
     /**
@@ -49,10 +49,12 @@ class AppointmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    public function edit($id)
+{
+    $users = Appointment::findOrFail($id); // Appointment ka record fetch karo
+    return view('user.updateAppointment', compact('users')); // View ko pass karo
+}
+
 
     /**
      * Update the specified resource in storage.
@@ -60,6 +62,7 @@ class AppointmentController extends Controller
     public function update(Request $request, Appointment $bookAppoint)
     {
         $bookAppoint->update($request->all());
+        return view('user.hospital');
     }
 
     /**

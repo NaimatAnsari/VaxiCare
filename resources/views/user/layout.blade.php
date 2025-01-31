@@ -94,8 +94,14 @@
                         <a href="/vaccines" class="nav-item nav-link">Vaccines</a>
                         <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
                         <a href="{{route('usercontact.create')}}" class="nav-item nav-link">Contact</a> 
+                        @if (Auth::user()->role == 'Parent')
                         <a href="{{route('children.index')}}" class="nav-item nav-link">Children</a>
-                        <a href="/appointment" class="nav-item nav-link">Appointment</a> 
+                        <a href="/appointment" class="nav-item nav-link">Appointment</a>     
+                        @endif
+                        @if (Auth::user()->role == 'Hospital')
+                        <a href="/hospitalDashboard" class="nav-item nav-link">Hospital</a>    
+                        @endif
+                         
                         <div class="nav-item dropdown">
                             <a 
                                 href="#" 
@@ -113,9 +119,9 @@
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                 <li><a class="dropdown-item" href="/profile">Profile</a></li>
-                                <li><a class="dropdown-item" href="{{ route('users.create') }}">Register</a></li>
+                                <li><a class="dropdown-item" href="register">Register</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="login">Login</a></li>
+                                <li><a class="dropdown-item" href="/login">Login</a></li>
                             </ul>
                         </div>
                         

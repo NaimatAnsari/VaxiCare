@@ -16,7 +16,7 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
+                            <th>S.No</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Query Type</th>

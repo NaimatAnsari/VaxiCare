@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Children;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ChildrenController extends Controller
 {
@@ -11,7 +12,12 @@ class ChildrenController extends Controller
      */
     public function index()
     {
-        $childrens = Children::all();
+        $childrens = DB::table('childrens')
+        ->join('users as u', 'childrens.parent_id', '=', 'u.id') // Correct table and column
+        ->select('childrens.*', 'u.fullname as parent_id') // Replace 'name' with 'full_name' or correct column name
+        ->get();
+    
+
         return view('user.children',compact('childrens'));
     }
 

@@ -13,54 +13,51 @@
 </style>
 <body>
     <div class="text-center mx-auto mb-5 mt-5" style="max-width: 500px;">
-        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Register Child Information</h5>
-        <h1 class="display-4">Add Children Details</h1>
+        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Hospital Manage Appointments</h5>
+        <h1 class="display-4">Vaccination Appointment Dashboard</h1>
     </div>
 
-    <div class="container">
-        <a href="{{route('children.create')}}" class="btn btn-dark mb-3">Add New Children </i></a>
+    <div class="container py-5">
 
+        
         <table class="table table-hover text-center">
   <thead class="table-dark">
     <tr>
-      <th scope="col">Parent ID</th>
-      <th scope="col">Name</th>
-      <th scope="col">Date of Birth</th>
-      <th scope="col">Gender</th>
+      <th scope="col">S.no</th>
+      <th scope="col">Child Name</th>
+      <th scope="col">Hospital Name</th>
+      <th scope="col">Appointment Date</th>
+      <th scope="col">Appointment Time</th>
+      <th scope="col">Vaccination Type</th>
+      <th scope="col">Comment</th>
       <th scope="col">Vaccination Status</th>
-      <th scope="col">Created At</th>
-      <th scope="col">Updated At</th>
-      <th scope="col">Action</th>
+      <th scope="col">Update Vaccination Status</th>
     </tr>
   </thead>
   <tbody>
-  
-      
+    
+    @foreach ($users as $bookApp)
+        
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td><b></b></td>
-      <td></td>
-      <td></td>
+      <td>{{$loop->iteration  }}</td>
+      <td>{{$bookApp->child_name }}</td>
+      <td>{{$bookApp->hospital_name }}</td>
+      <td>{{$bookApp->vaccination_date }}</td>
+      <td>{{$bookApp->vaccination_time }}</td>
+      <td>{{$bookApp->vaccine_type }}</td>
+      <td>{{$bookApp->comment}}</td>
+      <td>{{$bookApp->status }}</td>
+      <td>
+        <a href="/updateAppoint" class="btn btn-dark mb-3"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i>Update Vaccination Status</a>
+      </td>
       
-    <td>
-      <a href="{{ route('children.edit', $children->id)}}" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i></a>
-      <form action="{{ route('children.destroy', $children->id) }}" method="POST" style="display:inline;">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="link-dark border-0 bg-transparent">
-            <i class="fa-solid fa-trash fs-5 hover-red"></i>
-        </button>
-    </form></td>
   </tr>
-
 
 
     @endforeach
 
-        
+     
+
   </tbody>
 </table>
     </div>

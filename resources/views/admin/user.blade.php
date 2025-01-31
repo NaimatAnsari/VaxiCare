@@ -33,8 +33,8 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Full Name</th>
+                            <th>S.No</th>
+                            <th>Name</th>
                             <th>Address</th>
                             <th>Role</th>
                             <th>Phone</th>

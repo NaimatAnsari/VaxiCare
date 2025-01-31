@@ -19,7 +19,7 @@ return new class extends Migration
             $table->time('vaccination_time');
             $table->string('vaccine_type'); // Vaccine type column added
             $table->text('comment')->nullable(); // Comment column added
-            $table->enum('status', ['Pending', 'Approved', 'Rejected'])->default('Pending');
+            $table->enum('status', ['Pending', 'Approved', 'Rejected', 'Scheduled', 'Vaccinated', 'Cancelled'])->default('Pending');
             $table->timestamps();
         });
     }

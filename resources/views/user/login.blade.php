@@ -14,7 +14,8 @@
                         <p>Enter your email and password to login. If you don't have an account, you can easily register.</p>
                     </div>
                     
-                    <form method="POST" action="" enctype="multipart/form-data">
+                    <form method="POST" action="authLogin" enctype="multipart/form-data">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-12">
                                 <input type="email" name="email" class="form-control bg-light border-0" placeholder="Email Address" style="height: 55px;" required>

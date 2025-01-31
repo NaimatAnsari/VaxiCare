@@ -48,6 +48,7 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
+                            <th>S.No</th>
                             <th>Child Name</th>
                             <th>Hospital</th>
                             <th>Appointment Date</th>
@@ -61,16 +62,19 @@
                     </thead>
                     <tbody>
                         
-      
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      @foreach ($bookings as $booking)
+    
+      <tr>
+        <td>{{$loop->iteration}}</td>
+        <td>{{$booking->child_name }}</td>
+      <td>{{$booking->hospital_name }}</td>
+      <td>{{$booking->vaccination_date }}</td>
+      <td>{{$booking->vaccination_time }}</td>
+      <td>{{$booking->vaccine_type }}</td>
+      <td>{{$booking->comment}}</td>
+      <td>{{$booking->status }}</td>
+        <td>{{$booking->created_at}}</td>
+        <td>{{$booking->updated_at}}</td>
       <td class="text-right">
         <div class="dropdown dropdown-action">
             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
@@ -82,6 +86,9 @@
     </td>
 </tr>
 
+
+      @endforeach
+    
         
                         
                        

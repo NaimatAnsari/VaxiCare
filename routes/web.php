@@ -9,7 +9,7 @@ use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\VaccineController;
 use App\Http\Controllers\AppointmentController;
-
+use App\Http\Controllers\AuthController;
 
 // Resouce Controller 
 
@@ -42,13 +42,23 @@ Route::get('/profile',[UserController::class,'profile']);
 Route::get('/app',[UserController::class,'app']);
 
 
-// Route::get('appointment',[UserController::class,'appoint']);
+ Route::get('/register',[UserController::class,'register']);
 
 
-Route::get('/bookAppoint',[AdminController::class,'bookAppoint']);
+Route::get('/appointmentDetail',[AdminController::class,'bookAppoint']);
 
 
-Route::get('/profile',[UserController::class,'userProfile']);
+Route::get('/profile',[UserController::class,'profile']);
+
+Route::get('/hospitalDashboard',[UserController::class,'hospital']);
+
+Route::get('/updateAppoint',[UserController::class,'updateAppoint']);
+
+
+Route::get('/login',[AuthController::class,'showLogin']);
+
+
+Route::post('authLogin',[AuthController::class,'authLogin']);
 
 
 
