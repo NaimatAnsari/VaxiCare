@@ -92,37 +92,50 @@
                         <a href="/home" class="nav-item nav-link">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
                         <a href="/vaccines" class="nav-item nav-link">Vaccines</a>
-                        <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
-                        <a href="{{route('usercontact.create')}}" class="nav-item nav-link">Contact</a> 
+                        
+
+                        @if (Auth::check())
+
                         @if (Auth::user()->role == 'Parent')
-                        <a href="{{route('children.index')}}" class="nav-item nav-link">Children</a>
+                        
+                        
+                        <a href="/children" class="nav-item nav-link">Children</a>
                         <a href="/appointment" class="nav-item nav-link">Appointment</a>     
+                        <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
                         @endif
+
                         @if (Auth::user()->role == 'Hospital')
                         <a href="/hospitalDashboard" class="nav-item nav-link">Hospital</a>    
+                        <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
                         @endif
-                         
+
+                        @endif
+
+                        <a href="/contact" class="nav-item nav-link">Contact</a> 
+
                         <div class="nav-item dropdown">
-                            <a 
-                                href="#" 
-                                class="nav-link dropdown-toggle d-flex align-items-center" 
-                                id="userDropdown" 
-                                role="button" 
-                                data-bs-toggle="dropdown" 
-                                aria-expanded="false"
-                            >
-                                <div 
-                                    style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #20c5dd; border-radius: 50%;"
-                                >
+                            <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #20c5dd; border-radius: 50%;">
                                     <i class='bx bx-user' style="font-size: 20px; color: #fff;"></i>
                                 </div>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            @if (Auth::check())
+                                
                                 <li><a class="dropdown-item" href="/profile">Profile</a></li>
+                                <li><a class="dropdown-item" href="/logout">Logout</a></li>
+
+                                
+                            @else
+                                
                                 <li><a class="dropdown-item" href="register">Register</a></li>
-                                <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="/login">Login</a></li>
-                            </ul>
+
+                            
+                            @endif
+
+                                
+                                </ul>
                         </div>
                         
                     </div>

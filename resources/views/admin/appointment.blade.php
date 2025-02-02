@@ -54,7 +54,8 @@
                             <th>Appointment Date</th>
                             <th>Appointment Time</th>
                             <th>Vaccine Type</th>
-                            <th>Additional Comments (Optional)</th>
+                            <th>Comments </th>
+                            <th>Vaccination Status</th>
                             <th>Created At</th>
                             <th>Updated At</th>
                             <th class="text-right">Action</th>
@@ -67,10 +68,10 @@
       <tr>
         <td>{{$loop->iteration}}</td>
         <td>{{$booking->child_name }}</td>
-      <td>{{$booking->hospital_name }}</td>
+      <td>{{$booking->h_name }}</td>
       <td>{{$booking->vaccination_date }}</td>
       <td>{{$booking->vaccination_time }}</td>
-      <td>{{$booking->vaccine_type }}</td>
+      <td>{{$booking->vaccine_name }}</td>
       <td>{{$booking->comment}}</td>
       <td>{{$booking->status }}</td>
         <td>{{$booking->created_at}}</td>

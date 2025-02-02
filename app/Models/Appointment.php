@@ -14,6 +14,7 @@ class Appointment extends Model
     protected $fillable = [
         'child_id',
         'hospital_id',
+        'parent_id',
         'vaccination_date',
         'vaccination_time',
         'vaccine_type',

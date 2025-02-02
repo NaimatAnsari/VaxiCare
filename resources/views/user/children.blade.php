@@ -29,8 +29,8 @@
       <th scope="col">Gender</th>
       <th scope="col">Vaccination Status</th>
       {{-- <th scope="col">Created At</th>
-      <th scope="col">Updated At</th>
-      <th scope="col">Action</th> --}}
+      <th scope="col">Updated At</th> --}}
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -45,7 +45,7 @@
       {{-- <td>{{$children->created_at}}</td>
       <td>{{$children->updated_at}}</td> --}}
       
-    {{-- <td>
+    <td>
       <a href="{{ route('children.edit', $children->id)}}" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i></a>
       <form action="{{ route('children.destroy', $children->id) }}" method="POST" style="display:inline;">
         @csrf
@@ -53,7 +53,7 @@
         <button type="submit" class="link-dark border-0 bg-transparent">
             <i class="fa-solid fa-trash fs-5 hover-red"></i>
         </button>
-    </form></td> --}}
+    </form></td>
   </tr>
 
 

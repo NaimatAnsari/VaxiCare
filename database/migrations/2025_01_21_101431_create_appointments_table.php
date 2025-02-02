@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('child_id');
             $table->unsignedBigInteger('hospital_id');
+            $table->integer('parent_id');
             $table->date('vaccination_date');
             $table->time('vaccination_time');
             $table->string('vaccine_type'); // Vaccine type column added

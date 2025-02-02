@@ -35,13 +35,18 @@
                     <form method="POST" action="{{route('appointment.store')}}">
                         @csrf
                 <div class="row g-3">        
+                    <input type="text" value="{{Auth::user()->id}}" name="parent_id" id="parent_id" hidden>
                             <div class="col-12">
                                 <label for="child_name" class="form-label fw-bold">Select Child Name</label>
                                 <select name="child_id" id="child_name" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+{{$child}}
                                     <option value="" disabled selected>Select Child Name</option>
-                                    <option value="Child 1">Child 1</option>
-                                    <option value="Child 2">Child 2</option>
-                                    <option value="Child 3">Child 3</option>
+                                    @foreach ($child as $ch)
+                                    <option value="{{$ch->id}}">{{$ch->name}}</option>
+                    
+                                    
+                                    
+                                    @endforeach
                                 </select>
                             </div>
                            {{-- child_name<input type="number" name="child_id">
@@ -51,9 +56,12 @@
                                 <label for="hospital" class="form-label fw-bold">Select Hospital</label>
                                 <select name="hospital_id" id="hospital" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                                     <option value="" disabled selected>Select Hospital</option>
-                                    <option value="Hospital 1">Hospital 1</option>
-                                    <option value="Hospital 2">Hospital 2</option>
-                                    <option value="Hospital 3">Hospital 3</option>
+                                    {{$hospital}}
+                                    @foreach ($hospital as $hos)
+                                    <option value="{{$hos->id}}">{{$hos->fullname}}</option>
+                                        
+                                    @endforeach
+
                                 </select>
                             </div>
                             
@@ -68,16 +76,16 @@
                                 <label for="appointment_time" class="form-label fw-bold">Appointment Time</label>
                                 <input type="time" name="vaccination_time" id="appointment_time" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                             </div>
-                            
                             <div class="col-12">
                                 <label for="vaccine_type" class="form-label fw-bold">Vaccine Type</label>
-                                <select name="vaccine_type" id="child_name" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                                <select name="vaccine_type" id="vaccine_type" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                                     <option value="" disabled selected>Select Vaccine Type</option>
-                                    <option value="Vaccine 1">Vaccine 1</option>
-                                    <option value="Vaccine 2">Vaccine 2</option>
-                                    <option value="Vaccine 3">Vaccine 3</option>
+                                    @foreach ($vaccines as $vaccine)
+                                        <option value="{{$vaccine->id}}">{{$vaccine->vaccine_name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
+                            
                 
                             <div class="col-12">
                                 <label for="notes" class="form-label fw-bold">Additional Comments (Optional)</label>

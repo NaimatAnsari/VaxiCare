@@ -75,4 +75,17 @@ document.getElementById('toggle-password').addEventListener('click', function() 
 </script>
 
 
+@if(session('Wrong'))
+<script>
+    Swal.fire({
+        title: 'Wrong',
+        text: "{{ session('Wrong') }}",
+        icon: 'error',
+        confirmButtonText: 'OK'
+    });
+</script>
+@endif
+
+
+
 @endsection

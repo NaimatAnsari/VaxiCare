@@ -41,11 +41,11 @@
     <tr>
       <td>{{$loop->iteration  }}</td>
       <td>{{$bookApp->child_name }}</td>
-      <td>{{$bookApp->hospital_name }}</td>
+      <td>{{$bookApp->h_name }}</td>
       <td>{{$bookApp->vaccination_date }}</td>
       <td>{{$bookApp->vaccination_time }}</td>
-      <td>{{$bookApp->vaccine_type }}</td>
-      <td>{{$bookApp->comment}}</td>
+      <td>{{$bookApp->vaccine_name }}</td>
+       <td>{{$bookApp->comment}}</td>
       <td>{{$bookApp->status }}</td>
       <td>
         <a href="/updateAppoint" class="btn btn-dark mb-3"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i>Update Vaccination Status</a>

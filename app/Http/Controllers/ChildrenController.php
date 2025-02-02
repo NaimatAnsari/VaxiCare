@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Children;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ChildrenController extends Controller
@@ -18,7 +19,7 @@ class ChildrenController extends Controller
         ->get();
     
 
-        return view('user.children',compact('childrens'));
+        return view('admin.childrenDetail',compact('childrens'));
     }
 
     /**

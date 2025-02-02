@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\Models\Appointment;
+use App\Models\Children;
+use App\Models\Vaccine;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class AppointmentController extends Controller
 {
@@ -11,22 +15,31 @@ class AppointmentController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $users = DB::table('bookings')
-            ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
-            ->join('hospitals as h', 'bookings.hospital_id', '=', 'h.id')
-            ->select('bookings.*', 'c.name as child_name', 'h.name as hospital_name')
-            ->get();
-    
-        return view('user.Appointment', compact('users'));
-    }
+{
+    $users = DB::table('bookings')
+        ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
+        ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
+        ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
+        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name') // Correct field
+        ->where('bookings.parent_id', Auth::id()) // Filtering by parent_id
+        ->get();
+
+        // dd($users);
+    return view('user.Appointment', compact('users'));
+}
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
-        return view('user.bookappointment');
+
+        $child = Children::where('parent_id', Auth::user()->id)->get();
+            $hospital = User::where('role','Hospital')->get();
+            $vaccine = Vaccine::where('availability_status','Available')->get();
+
+
+        return view('user.bookappointment',["child"=>$child , "hospital"=>$hospital , "vaccines"=>$vaccine]);
     }
 
     /**

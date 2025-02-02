@@ -36,8 +36,9 @@
                         @csrf
                         <div class="row g-3">
                             <div class="col-12">
-                                <label for="parent_id" class="form-label fw-bold">Parent ID</label>
-                                <input type="text" name="parent_id" id="parent_id" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
+                                <label for="parent_id" class="form-label fw-bold">Parent</label>
+                                <input type="text" value="{{Auth::user()->id}}" name="parent_id" id="parent_id" hidden>
+                                <input type="text" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required value="{{Auth::user()->fullname}}" readonly>
                             </div>
 
                             <div class="col-12">

@@ -48,7 +48,8 @@
                 <table class="table table-striped custom-table">
                     <thead>
                         <tr>
-                            <th>Parent ID</th>
+                            <th>S.No</th>
+                            <th>Parent Name</th>
                             <th>Name</th>
                             <th>Date Of Birth</th>
                             <th>Gender</th>
@@ -64,6 +65,7 @@
       
     <tr>
       <td>{{$loop->iteration }}</td>
+      <td>{{$children->parent_id}}</td>
       <td>{{$children->name}}</td>
       <td>{{$children->date_of_birth}}</td>
       <td>{{$children->gender}}</td>

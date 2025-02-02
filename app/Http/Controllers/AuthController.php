@@ -20,13 +20,28 @@ class AuthController extends Controller
             'email' => $request->email,
             'password' => $request->password,
         ])) {
-            return redirect('/home'); // Successfully logged in, redirect to home
+
+            if(Auth::user()->role == "Admin"){
+                return redirect('/vaxicare'); 
+            }else{
+
+                return redirect('/home'); // Successfully logged in, redirect to home
+            }
         } else {
-            return back()->with('error', 'Please enter correct email or password'); // Stay on the same page with an error message
+            
+    session()->flash('Wrong', 'Email or Password is incorrect. Please try again.');
+    return redirect()->back(); // Stay on the same page with an error message
         }
     }
      
+    public function logout()
+    {
+        Auth::logout();
+
+        return redirect('/');
+    }
 
 
+    
 
 }
