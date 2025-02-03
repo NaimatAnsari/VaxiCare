@@ -15,7 +15,7 @@
                 $table->id();
                 $table->string('fullname', 150);
                 $table->text('address');
-                $table->enum('role', ['Admin', 'Parent', 'Hospital']);
+                $table->enum('role', ['Admin','Parent', 'Hospital']);
                 $table->string('phone_number', 20)->nullable();
                 $table->string('email', 100)->unique();
                 $table->string('password');

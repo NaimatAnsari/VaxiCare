@@ -18,11 +18,12 @@
     </div>
 
     <div class="container">
-        <a href="{{route('children.create')}}" class="btn btn-dark mb-3">Add New Children </i></a>
+        <a href="RegisterChildren" class="btn btn-dark mb-3">Add New Children </i></a>
 
         <table class="table table-hover text-center">
   <thead class="table-dark">
     <tr>
+      <th scope="col">S.No</th>
       <th scope="col">Parent Name</th>
       <th scope="col">Child Name</th>
       <th scope="col">Date of Birth</th>
@@ -37,6 +38,8 @@
     @foreach ($childrens as $children)
       
     <tr>
+      
+      <td>{{$loop->iteration}}</td>
       <td>{{$children->parent_id}}</td>
       <td>{{$children->name}}</td>
       <td>{{$children->date_of_birth}}</td>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Vaccine;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Children;
 class UserController extends Controller
     {
     public function home()
@@ -24,7 +25,7 @@ class UserController extends Controller
         return view('user.vaccines' , compact('vaccines'));
     }
 
-    public function children(){
+    public function childrenDashborad(){
         $childrens = DB::table('childrens')
         ->join('users as u', 'childrens.parent_id', '=', 'u.id') // Correct table and column
         ->select('childrens.*', 'u.fullname as parent_id') // Replace 'name' with 'full_name' or correct column name
@@ -34,6 +35,24 @@ class UserController extends Controller
 
         return view('user.children',compact('childrens'));
     }
+
+    
+    public function bookAppointment()
+    {
+        $child = Children::where('parent_id', Auth::user()->id)->get();
+        $hospital = User::where('role','Hospital')->get();
+        $vaccine = Vaccine::where('availability_status','Available')->get();
+
+
+    return view('user.bookappointment',["child"=>$child , "hospital"=>$hospital , "vaccines"=>$vaccine]);
+    }
+
+    public function childrenRegister()
+    {
+        return view('user.addChildren');
+    }
+
+
 
     public function app()
     {

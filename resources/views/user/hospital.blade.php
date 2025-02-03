@@ -17,7 +17,7 @@
         <h1 class="display-4">Vaccination Appointment Dashboard</h1>
     </div>
 
-    <div class="container py-5">
+    <div class="container-fluide px-4 py-5">
 
         
         <table class="table table-hover text-center">
@@ -48,7 +48,7 @@
        <td>{{$bookApp->comment}}</td>
       <td>{{$bookApp->status }}</td>
       <td>
-        <a href="/updateAppoint" class="btn btn-dark mb-3"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i>Update Vaccination Status</a>
+        <a href="/updateAppoint" class="btn btn-dark "><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i>Update Vaccination Status</a>
       </td>
       
   </tr>

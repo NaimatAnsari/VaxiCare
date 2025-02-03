@@ -55,9 +55,8 @@
                             <div class="col-12">
                                 <select name="role" class="form-control bg-light border-0 shadow-none" style="height: 55px;" required>
                                     <option value="" disabled selected>Select Role</option>
-                                    <option value="parent">Parent</option>
-                                    <option value="hospital">Hospital</option>
-                                    <option value="admin">Admin</option>
+                                    <option value="Parent">Parent</option>
+                                    <option value="Hospital">Hospital</option>
                                 </select>
                             </div>
                             <div class="col-12">

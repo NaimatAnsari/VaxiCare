@@ -41,7 +41,8 @@ class AdminController extends Controller
         ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
         ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
         ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
-        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name') // Correct field
+        ->join('users as p', 'bookings.parent_id', '=', 'p.id')
+        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name', 'p.fullname as parent_name') // Correct field
         ->get();
 
         return view('admin.appointment', compact('bookings'));

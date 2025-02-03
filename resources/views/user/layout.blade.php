@@ -99,7 +99,7 @@
                         @if (Auth::user()->role == 'Parent')
                         
                         
-                        <a href="/children" class="nav-item nav-link">Children</a>
+                        <a href="/childrenDashborad" class="nav-item nav-link">Children</a>
                         <a href="/appointment" class="nav-item nav-link">Appointment</a>     
                         <a href="{{route('feedback.create')}}" class="nav-item nav-link">Feedback</a>
                         @endif
@@ -115,6 +115,7 @@
 
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle d-flex align-items-center" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                
                                 <div style="display: flex; justify-content: center; align-items: center; width: 40px; height: 40px; background-color: #20c5dd; border-radius: 50%;">
                                     <i class='bx bx-user' style="font-size: 20px; color: #fff;"></i>
                                 </div>

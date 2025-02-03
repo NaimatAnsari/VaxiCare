@@ -11,32 +11,43 @@ use App\Http\Controllers\VaccineController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 
-// Resource Controllers
-Route::resource('users', UsersController::class);
-Route::resource('children', ChildrenController::class);
-Route::resource('feedback', FeedbackController::class);
-Route::resource('usercontact', UserContactController::class);
-Route::resource('vaccine', VaccineController::class);
-Route::resource('appointment', AppointmentController::class);
 
-// General Routes
+// Public Show Routes
 Route::get('/', [UserController::class, 'home']); // By Default
 Route::get('/home', [UserController::class, 'home']); // Home
 Route::get('/about', [UserController::class, 'about']); // About
 Route::get('/vaccines', [UserController::class, 'vaccines']); // Vaccine
+Route::resource('feedback', FeedbackController::class); // Feedback
 Route::get('/contact', [UserController::class, 'contact']); // Contact
+Route::get('/register', [UserController::class, 'register']); // Register
+Route::get('/login', [AuthController::class, 'showLogin']); // Login
 
+
+
+// Parent Show Routes
+Route::get('/appointment', [UserController::class, 'appoint']); // Profile
 Route::get('/profile', [UserController::class, 'profile']); // Profile
 Route::get('/logout', [AuthController::class, 'logout']); // Logout
-Route::get('/updateAppoint', [UserController::class, 'updateAppoint']); // 
-Route::get('/children', [UserController::class, 'children']); // 
+Route::get('/childrenDashborad', [UserController::class, 'childrenDashborad']); // 
+Route::get('/RegisterChildren', [UserController::class, 'childrenRegister']); // 
+Route::get('/bookAppointment', [UserController::class, 'bookAppointment']); //
+
+
+
+
+// Hospital Show Routes
+Route::get('/hospitalDashboard', [UserController::class, 'hospital']);
+Route::get('/updateAppoint', [UserController::class, 'updateAppoint']);// Update Vaccination Update
+Route::get('/profile', [UserController::class, 'profile']); // Profile
+Route::get('/logout', [AuthController::class, 'logout']); // Logout
+
 
 
 
 // Hospital Routes under Hospital Middleware
 Route::middleware(['checkUser:Hospital'])->group(function () {// Hospital dashboard route
     
-    Route::get('/hospitalDashboard', [UserController::class, 'hospital']);
+    
     Route::get('/register', [UserController::class, 'register']);
     Route::get('/login', [AuthController::class, 'showLogin']);
     
@@ -71,7 +82,7 @@ Route::post('authLogin', [AuthController::class, 'authLogin']);
 
 // Admin Routing
 
-Route::get('vaxicare',[AdminController::class,'home']);
+Route::get('vaxicare',[AdminController::class,'home']); 
 
 Route::get('childrenDetail',[AdminController::class,'childrenDetail']);
 
@@ -91,3 +102,12 @@ Route::get('/adminlogin', [AdminController::class, 'showLogin']);
 
 
 Route::get('/admin', [AdminController::class, 'authLogin']);
+
+
+// Resource Controllers
+Route::resource('users', UsersController::class);
+Route::resource('children', ChildrenController::class);
+
+Route::resource('usercontact', UserContactController::class);
+Route::resource('vaccine', VaccineController::class);
+Route::resource('appointment', AppointmentController::class);

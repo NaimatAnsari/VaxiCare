@@ -27,7 +27,7 @@ class ChildrenController extends Controller
      */
     public function create()
     {
-        return view('user.addChildren');
+
     }
 
     /**
@@ -36,7 +36,7 @@ class ChildrenController extends Controller
     public function store(Request $request)
     {
         Children::create($request->all());
-        return redirect()->route('children.index');
+        return redirect('/childrenDashborad');
     }
 
     /**
@@ -67,9 +67,9 @@ class ChildrenController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         Children::find($id)->delete();
-        return redirect()->route('children.index');
+        return redirect()->back();
     }
 }

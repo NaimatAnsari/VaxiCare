@@ -26,10 +26,21 @@
                         <p class="badge text-white py-2 px-4 my-2" style="background-color: #3CB043;">{{ $vaccine->availability_status }}</p> <br>
 
                         @if (Auth::check())
-                        <a href="/children" class="btn btn-outline-primary rounded-pill py-2 px-4 my-2">Apply Now</a>
-                            
+                        @if (Auth::user()->role == 'Parent')
+                        <a href="/childrenDashborad" class="btn btn-outline-primary rounded-pill py-2 px-4 my-2">Apply Now</a>
+                        @endif
                         @else
                         <a href="/login" class="btn btn-outline-primary rounded-pill py-2 px-4 my-2">Apply Now</a>
+                            
+                        @endif
+
+                        @if (Auth::check())
+                        @if (Auth::user()->role == 'Hospital')
+                        
+                        <a href="/hospitalDashboard" class="btn btn-outline-primary rounded-pill py-2 px-4 my-2">Apply Now</a>
+                            
+                        @endif
+                            
                             
                         @endif
 

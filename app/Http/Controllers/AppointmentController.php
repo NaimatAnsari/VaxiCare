@@ -20,7 +20,8 @@ class AppointmentController extends Controller
         ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
         ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
         ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
-        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name') // Correct field
+        ->join('users as p', 'bookings.parent_id', '=', 'p.id')
+        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name' , 'p.fullname as parent_name') // Correct field
         ->where('bookings.parent_id', Auth::id()) // Filtering by parent_id
         ->get();
 
@@ -34,12 +35,12 @@ class AppointmentController extends Controller
     public function create()
     {
 
-        $child = Children::where('parent_id', Auth::user()->id)->get();
-            $hospital = User::where('role','Hospital')->get();
-            $vaccine = Vaccine::where('availability_status','Available')->get();
+        // $child = Children::where('parent_id', Auth::user()->id)->get();
+        //     $hospital = User::where('role','Hospital')->get();
+        //     $vaccine = Vaccine::where('availability_status','Available')->get();
 
 
-        return view('user.bookappointment',["child"=>$child , "hospital"=>$hospital , "vaccines"=>$vaccine]);
+        // return view('user.bookappointment',["child"=>$child , "hospital"=>$hospital , "vaccines"=>$vaccine]);
     }
 
     /**

@@ -17,14 +17,15 @@
           <h1 class="display-4">Schedule Your Appointment</h1>
       </div>
 
-      <div class="container">
+      <div class="container-fluide px-5">
 
-          <a href="{{ route('appointment.create')}}" class="btn btn-dark mb-3">Book Appointment </i></a>
+          <a href="/bookAppointment" class="btn btn-dark mb-3">Book Appointment </i></a>
 
           <table class="table table-hover text-center">
     <thead class="table-dark">
       <tr>
-        <th scope="col">S.no</th>
+        <th scope="col">S.No</th>
+        <th scope="col">Parent Name</th>
         <th scope="col">Child Name</th>
         <th scope="col">Hospital Name</th>
         <th scope="col">Appointment Date</th>
@@ -32,7 +33,7 @@
         <th scope="col">Vaccination Type</th>
         <th scope="col">Comment</th>
         <th scope="col">Vaccination Status</th>
-        {{-- <th scope="col">Action</th> --}}
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -41,6 +42,7 @@
           
       <tr>
         <td>{{$loop->iteration  }}</td>
+        <td>{{$bookApp->parent_name }}</td>
         <td>{{$bookApp->child_name }}</td>
         <td>{{$bookApp->h_name }}</td>
         <td>{{$bookApp->vaccination_date }}</td>
@@ -51,10 +53,10 @@
         {{-- <td>{{$bookApp->created_at }}</td>
         <td>{{$bookApp->updated_at }}</td> --}}
         
-      {{-- <td>
+      <td>
         <a href="edit.php" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 hover-green me-3" ></i></a>
         <a href="delete.php" class="link-dark"><i class="fa-solid fa-trash fs-5 hover-red"></i></a>
-      </td> --}}
+      </td>
     </tr>
 
 

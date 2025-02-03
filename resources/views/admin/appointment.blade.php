@@ -9,7 +9,7 @@
             <h4 class="page-title">Appointment Detials</h4>
         </div>
         <div class="col-sm-8 col-9 text-right m-b-20">
-            <a href="addChildren" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Book Appointment</a>
+            {{-- <a href="addChildren" class="btn btn-primary float-right btn-rounded"><i class="fa fa-plus"></i> Book Appointment</a> --}}
         </div>
     </div>
     <div class="row filter-row">
@@ -49,6 +49,7 @@
                     <thead>
                         <tr>
                             <th>S.No</th>
+                            <th>Parent Name</th>
                             <th>Child Name</th>
                             <th>Hospital</th>
                             <th>Appointment Date</th>
@@ -67,6 +68,7 @@
     
       <tr>
         <td>{{$loop->iteration}}</td>
+        <td>{{$booking->parent_name }}</td>
         <td>{{$booking->child_name }}</td>
       <td>{{$booking->h_name }}</td>
       <td>{{$booking->vaccination_date }}</td>
