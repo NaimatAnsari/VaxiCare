@@ -15,19 +15,38 @@ class AppointmentController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-{
-    $users = DB::table('bookings')
-        ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
-        ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
-        ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
-        ->join('users as p', 'bookings.parent_id', '=', 'p.id')
-        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name' , 'p.fullname as parent_name') // Correct field
-        ->where('bookings.parent_id', Auth::id()) // Filtering by parent_id
-        ->get();
-
-        // dd($users);
-    return view('user.Appointment', compact('users'));
-}
+    {
+        // Current logged-in user
+        $user = Auth::user();
+    
+        // If the user is a parent, show only their appointments
+        if ($user->role === 'Parent') {
+            $users = DB::table('bookings')
+                ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
+                ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
+                ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
+                ->join('users as p', 'bookings.parent_id', '=', 'p.id')
+                ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name', 'p.fullname as parent_name')
+                ->where('bookings.parent_id', $user->id) // ✅ Parent sirf apni appointments dekh sake
+                ->get();
+        } 
+        // If the user is a hospital, show only their received appointments
+        elseif ($user->role === 'Hospital') {
+            $users = DB::table('bookings')
+                ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
+                ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
+                ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
+                ->join('users as p', 'bookings.parent_id', '=', 'p.id')
+                ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name', 'p.fullname as parent_name')
+                ->where('bookings.hospital_id', $user->id) // ✅ Hospital sirf apni received requests dekh sake
+                ->get();
+        } 
+        else {
+            return abort(403, 'Unauthorized Access'); // ✅ Agar koi aur user hai, access deny
+        }
+    
+        return view('user.Appointment', compact('users'));
+    }    
 
     /**
      * Show the form for creating a new resource.
@@ -73,11 +92,23 @@ class AppointmentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Appointment $bookAppoint)
-    {
-        $bookAppoint->update($request->all());
-        return view('user.hospital');
+    public function update(Request $request, $id)
+{
+    $appointment = Appointment::findOrFail($id);
+    $appointment->status = $request->status;
+    $appointment->save();
+
+    // Hospital user hone par hospital page par redirect kare
+    if (Auth::user()->role === 'Hospital') {
+        return redirect()->back()->with('success', 'Appointment status updated!');
+
     }
+
+    return redirect()->route('appointment.index')->with('success', 'Appointment status updated!');
+}
+
+
+
 
     /**
      * Remove the specified resource from storage.

@@ -61,18 +61,25 @@ class UserController extends Controller
 
     public function hospital()
     {
+        // Get the currently logged-in user
+        $user = Auth::user();
+    
+        // Ensure the logged-in user is a hospital
+        if ($user->role !== 'Hospital') {
+            return abort(403, 'Unauthorized Access'); // Only hospitals can access this page
+        }
+    
+        // Fetch bookings for the logged-in hospital
         $users = DB::table('bookings')
-        ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
-        ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
-        ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
-        ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name') // Correct field
-        ->get();
-
-
-    return view('user.hospital', compact('users'));
-
+            ->join('childrens as c', 'bookings.child_id', '=', 'c.id')
+            ->join('users as h', 'bookings.hospital_id', '=', 'h.id')
+            ->join('vaccines as v', 'bookings.vaccine_type', '=', 'v.id')
+            ->select('bookings.*', 'c.name as child_name', 'h.fullname as h_name', 'v.vaccine_name as vaccine_name')
+            ->where('bookings.hospital_id', $user->id) // Filter by the logged-in hospital's ID
+            ->get();
+    
+        return view('user.hospital', compact('users'));
     }
-
     public function profile()
     {   
         $users = User::all();
