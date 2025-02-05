@@ -91,7 +91,11 @@ class UsersController extends Controller
         $user->fullname =  $request->fullname;
         $user->fullname = $request->fullname;
             $user->email = $request->email;
-            $user->password =  bcrypt($request->password); // Password will be hashed in the model
+
+            if ($request->filled('password')) {
+                $user->password = $request->password;
+            } 
+            
             $user->address = $request->address;
             $user->role = $request->role;
             $user->phone_number= $request->phone_number;

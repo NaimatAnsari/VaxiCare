@@ -7,12 +7,18 @@ use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\Children;
 use App\Models\Appointment;
+use App\Models\Vaccine;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     public function home(){
-        return view('admin.home');   
+        $hospitalCount = User::where('role', 'Hospital')->count();
+        $vaccineCount = Vaccine::count();
+        $childrenCount = Children::count();
+        $appointmentCount = Appointment::count();
+    
+        return view('admin.home' ,  compact('hospitalCount', 'vaccineCount', 'childrenCount', 'appointmentCount'));   
     }
 
     public function childrenDetail(){
@@ -27,6 +33,7 @@ class AdminController extends Controller
         
         return view('admin.childrenDetail' , compact('childrens')); 
     }
+
 
     public function addChildren(){
         return view('admin.add-childrenDetail');   

@@ -10,7 +10,7 @@ use App\Http\Controllers\UserContactController;
 use App\Http\Controllers\VaccineController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\ReportController;
 
 // Public Show Routes
 Route::get('/', [UserController::class, 'home']); // By Default
@@ -21,6 +21,8 @@ Route::resource('feedback', FeedbackController::class); // Feedback
 Route::get('/contact', [UserController::class, 'contact']); // Contact
 Route::get('/register', [UserController::class, 'register']); // Register
 Route::get('/login', [AuthController::class, 'showLogin']); // Login
+
+Route::get('/Adminlogin', [AdminController::class, 'showLogin']); // Login
 
 
 
@@ -63,8 +65,12 @@ Route::middleware(['checkUser:Parent'])->group(function () {
     Route::get('/updateAppoint', [UserController::class, 'updateAppoint']);
 });
 
-// Authentication Route (Outside Middleware since it's a login function)
-Route::post('authLogin', [AuthController::class, 'authLogin']);
+// Admin Authentication Route (Outside Middleware since it's a login function)
+Route::post('/authLogin', [AuthController::class, 'authLogin'])->name('authLogin');
+
+
+// User Authentication Route (Outside Middleware since it's a login function)
+Route::post('/adminAuthLogin', [AuthController::class, 'adminAuthLogin'])->name('adminAuthLogin');
 
 // Admin Routes with a Prefix
 // Route::middleware(['checkUser:Admin'])->prefix('admin')->group(function () {
@@ -83,6 +89,8 @@ Route::post('authLogin', [AuthController::class, 'authLogin']);
 // Admin Routing
 
 Route::get('vaxicare',[AdminController::class,'home']); 
+
+Route::get('/report',[ReportController::class,'generateVaccinationReport']); 
 
 Route::get('childrenDetail',[AdminController::class,'childrenDetail']);
 
